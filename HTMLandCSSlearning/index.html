@@ -1,0 +1,87 @@
+<!--HTML is not case-sensitive-->
+<!--Validate HTML with https://validator.w3.org/nu/#file-->
+<!--Validate CSS with https://jigsaw.w3.org/css-validator/-->
+<!--Every document starts with-->
+<!DOCTYPE html>
+<!--Set to English-->
+<html lang="en">
+    <!--Gives information about page-->
+    <head>
+        <!--We define all meta elements-->
+        <meta charset="UTF-8"> <!--This gives the character set used-->
+        <!--This defines the initial width and zoom factor, allows page to look good on all devices-->
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta name="keywords", content="HTML,CSS">
+
+        <!--This is the description that WOULD show under the google search-->
+        <meta name="description" content="A page about works by Gemmel">
+        <title>My first web page</title>
+        <!--CSS code goes here-->
+        <style>
+            /*This affects all*/
+            img {
+                width: 100px;
+                border-radius: 20px; /*Rounds the edges*/
+                float: left; /*Now elements float to the left of the image*/
+                margin-right: 10px; /*To add some space to right*/
+            }
+
+            /*Add rules to book title*/
+            p.BookTitle {
+                font-weight: bold /*Makes this text bold*/
+            }
+            em {
+                color: red;
+                font-weight: normal;
+            }
+
+            .Heading {
+                float:left;
+            }
+        </style>
+    </head>
+
+    <!--Here we include stuff on the web page-->
+    <body>
+        <!---To include a picture, alt in case image cannot be displayed-->
+        <img src="images/LionOfMacedon.jpeg" alt="Image of the lion of Macedon book">
+        <p class="BookTitle">The lion of macedon &copy;</p>
+        <!--Styling should be done in CSS! We can use em or strong which is good for Google searches-->
+        <p>An <em>interesting</em> &lt;book&gt; following a despised boy who becomes a man</p>
+        <!--To go to a local page-->
+        <a href="about.html">About</a>
+        <!--To download the image-->
+        <a href="images/LionOfMacedon.jpeg" download>Photo</a>
+        <!--To open Google in a new tab-->
+        <a href="https://www.google.co.uk" target="_blank">Google</a>
+        <!--To let others email me-->
+        <a href="mailto:edwin.nganga2003@gmail.com">Email me!</a>
+        
+        <!--Now to jump to sections, look below-->
+        <a href="#section-about">Jump to About section</a>
+        <a href="#section-photo">Jump to Photo section</a>
+        <a href="#section-google">Jump to Google section</a>
+
+        <h2 id="section-about">About</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos incidunt eligendi ullam molestiae aspernatur quaerat inventore vitae quis pariatur itaque? Quas itaque rerum vero, porro dicta minus. Atque nisi nobis, sit fugit, accusantium molestiae voluptatum eum in corrupti voluptatem enim iure. Sint, quas voluptas adipisci quis distinctio velit quaerat voluptate ut et praesentium reiciendis id consequuntur quam, dolorum esse ullam. Cum minima, repellat asperiores facilis, explicabo quibusdam reiciendis a saepe placeat quia qui nesciunt totam. Explicabo quos beatae voluptates at optio corporis alias dignissimos pariatur ratione. Quae explicabo accusantium quis accusamus! Modi atque nihil, numquam totam recusandae esse iste perspiciatis laboriosam in rem omnis quos nisi nemo nulla officiis rerum similique quasi quibusdam, beatae ipsum. Voluptatibus hic aliquam velit veniam voluptas dolores impedit quam iusto culpa? Excepturi, dolorum quidem, mollitia nostrum minima fuga illo sed consequuntur omnis voluptates officia vitae incidunt officiis veritatis. Omnis voluptatum laborum libero modi aliquam maxime repellendus impedit exercitationem blanditiis quisquam, similique adipisci saepe culpa nam illum sit inventore molestias animi consequuntur quaerat dignissimos dicta. Ab rerum ipsa est! A exercitationem accusantium amet, earum officiis qui deserunt repellendus molestiae cupiditate repellat fugiat quis? Dignissimos ad incidunt fugit facere a sapiente cum distinctio! Ab, accusantium. Similique, ullam?</p>
+
+        <h2 id="section-photo">Photo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos incidunt eligendi ullam molestiae aspernatur quaerat inventore vitae quis pariatur itaque? Quas itaque rerum vero, porro dicta minus. Atque nisi nobis, sit fugit, accusantium molestiae voluptatum eum in corrupti voluptatem enim iure. Sint, quas voluptas adipisci quis distinctio velit quaerat voluptate ut et praesentium reiciendis id consequuntur quam, dolorum esse ullam. Cum minima, repellat asperiores facilis, explicabo quibusdam reiciendis a saepe placeat quia qui nesciunt totam. Explicabo quos beatae voluptates at optio corporis alias dignissimos pariatur ratione. Quae explicabo accusantium quis accusamus! Modi atque nihil, numquam totam recusandae esse iste perspiciatis laboriosam in rem omnis quos nisi nemo nulla officiis rerum similique quasi quibusdam, beatae ipsum. Voluptatibus hic aliquam velit veniam voluptas dolores impedit quam iusto culpa? Excepturi, dolorum quidem, mollitia nostrum minima fuga illo sed consequuntur omnis voluptates officia vitae incidunt officiis veritatis. Omnis voluptatum laborum libero modi aliquam maxime repellendus impedit exercitationem blanditiis quisquam, similique adipisci saepe culpa nam illum sit inventore molestias animi consequuntur quaerat dignissimos dicta. Ab rerum ipsa est! A exercitationem accusantium amet, earum officiis qui deserunt repellendus molestiae cupiditate repellat fugiat quis? Dignissimos ad incidunt fugit facere a sapiente cum distinctio! Ab, accusantium. Similique, ullam?</p>
+
+        <h2 id="section-google">Google</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos incidunt eligendi ullam molestiae aspernatur quaerat inventore vitae quis pariatur itaque? Quas itaque rerum vero, porro dicta minus. Atque nisi nobis, sit fugit, accusantium molestiae voluptatum eum in corrupti voluptatem enim iure. Sint, quas voluptas adipisci quis distinctio velit quaerat voluptate ut et praesentium reiciendis id consequuntur quam, dolorum esse ullam. Cum minima, repellat asperiores facilis, explicabo quibusdam reiciendis a saepe placeat quia qui nesciunt totam. Explicabo quos beatae voluptates at optio corporis alias dignissimos pariatur ratione. Quae explicabo accusantium quis accusamus! Modi atque nihil, numquam totam recusandae esse iste perspiciatis laboriosam in rem omnis quos nisi nemo nulla officiis rerum similique quasi quibusdam, beatae ipsum. Voluptatibus hic aliquam velit veniam voluptas dolores impedit quam iusto culpa? Excepturi, dolorum quidem, mollitia nostrum minima fuga illo sed consequuntur omnis voluptates officia vitae incidunt officiis veritatis. Omnis voluptatum laborum libero modi aliquam maxime repellendus impedit exercitationem blanditiis quisquam, similique adipisci saepe culpa nam illum sit inventore molestias animi consequuntur quaerat dignissimos dicta. Ab rerum ipsa est! A exercitationem accusantium amet, earum officiis qui deserunt repellendus molestiae cupiditate repellat fugiat quis? Dignissimos ad incidunt fugit facere a sapiente cum distinctio! Ab, accusantium. Similique, ullam?</p>
+
+
+        <class="Headings">
+            <h1>Heading 1</h1> <!--ONLY USE ONCE!-->
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+        </class>
+        
+        <!--To jump to top-->
+        <a href="#">Jump to top</a>
+    </body>
+</html>
