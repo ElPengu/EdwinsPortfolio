@@ -1,0 +1,12 @@
+Notes when creating this website
+- Created virtual environment with Python
+- Pip installed Django onto Python
+- startproject in correct directory
+- check server by "python manage.py runserver #PORTNUMBER"
+- configure settings - this will allow us to run server with Django directly
+- Created playground app
+- Added urls.py file
+- Map a view (lets say "hello") in views.py to urls.py
+- Go to store front and to settings
+- We include URLconf that was made in playground/urls.py
+- Now default page has no response, but if you navigate to /playground/hello/ you will see a response!
