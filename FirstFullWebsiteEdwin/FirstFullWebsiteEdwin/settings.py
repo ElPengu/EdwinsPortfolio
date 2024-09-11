@@ -35,9 +35,14 @@ INSTALLED_APPS = [
     'django.contrib.auth', # Authenticates users
     'django.contrib.contenttypes',
     'django.contrib.messages',
+    'django.contrib.sessions',
     'django.contrib.staticfiles', #Images, CSS, etc.
-    'playground' #Created an app called playground
+    'playground', #Created an app called playground
+    'mainsite', #Created an app called mainsite
+    'django.contrib.sites'
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -72,11 +77,15 @@ WSGI_APPLICATION = 'FirstFullWebsiteEdwin.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
+#We connect to the already made postgresql
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'FirstWebsiteEdwinDB',
+        'USER': 'Gaitho',
+        'PASSWORD': 'Gaitho',
+        'HOST': 'localhost', 
+        'PORT': '5433' 
     }
 }
 

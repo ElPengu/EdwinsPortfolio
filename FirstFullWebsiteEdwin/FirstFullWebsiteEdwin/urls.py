@@ -21,6 +21,11 @@ from django.urls import path, include
 
 # playground/X -> /X in urls.py
 urlpatterns = [
+    #For home page
+    path('', include('mainsite.urls')),
+
+    #For admin page
     path('admin/', admin.site.urls),
     path('playground/', include('playground.urls'))
+    
 ]

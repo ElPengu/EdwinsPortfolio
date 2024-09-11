@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Register here!</h1>
+
+    {% for message in messages %}
+
+    <h2>{{message}}</h2>
+
+    {% endfor %}
+
+    <!--Register form-->
+    <div class="RegisterForm">
+        <form action="{% url 'registerPage' %}" method="POST">
+            {% csrf_token %} <!--To register user-->
+
+            <div class="username">
+                <p>Username: </p>
+                <input type="text" name="username">
+            </div>
+            <div class="password">
+                <p>Password: </p>
+                <input type="text" name="password">
+            </div>
+            <div class="password1">
+                <p>Re-enter password: </p>
+                <input type="text" name="password1">
+            </div>
+            <div class="email">
+                <p>Email: </p>
+                <input type="email" name="email">
+            </div>
+            <div class="name">
+                <p>Name: </p>
+                <input type="text" name="name">
+            </div>
+            
+            <div class="submit">
+                <input type="submit" value="register">
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
