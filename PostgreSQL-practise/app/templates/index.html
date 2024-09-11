@@ -1,0 +1,29 @@
+<!--Base HTML from ./js-basics folder-->
+<!--Host for JS code-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Jambo ulimwengu! Ninasoma Django!</h1>
+    <!--Added the container class-->
+    <div class="container">
+        {% for x in obj%}
+        <div class="row">
+            <div class="com-lg-5 col-md-5 col-12">
+                Name: {{x.name}}
+            </div>
+            <div class="com-lg-5 col-md-5 col-12">
+                Description: {{x.desc}}
+            </div>
+            
+        </div>
+        {%endfor%}
+    </div>
+    <!--Reference javascript file at end here-->
+    <script src="index.js"></script>
+</body>
+</html>
