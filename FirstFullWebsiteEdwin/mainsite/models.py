@@ -5,8 +5,13 @@
 #   * Make sure each ForeignKey and OneToOneField has `on_delete` set to the desired behavior
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
+from typing import Any
 from django.db import models
 
+#For custom users
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
+
+from django.contrib.auth.models import UserManager
 
 class AuthGroup(models.Model):
     name = models.CharField(unique=True, max_length=150)
@@ -40,7 +45,7 @@ class AuthPermission(models.Model):
 
 class AuthUser(models.Model):
     password = models.CharField(max_length=128)
-    last_login = models.DateTimeField(blank=True, null=True)
+    #last_login = models.DateTimeField(blank=True, null=True)
     is_superuser = models.BooleanField()
     username = models.CharField(unique=True, max_length=150)
     first_name = models.CharField(max_length=150)
@@ -132,7 +137,38 @@ class DjangoSite(models.Model):
 # Unable to inspect table 'user'
 # The error was: permission denied for table user
 
-class User(models.Model):
+#We need a custom user manager
+
+class CustomUserManager(UserManager):
+    #To create a generic user
+    def _create_user(self, email, password, **extra_fields):
+        if not email:
+            raise ValueError("Invalid email provided")
+
+        #Normalise the email
+        email = self.normalize_email(email)
+
+        #Create user
+        user = self.model(email=email, **extra_fields)
+        #Set password
+        user.set_password(password)
+        #Save this user
+        user.save(using=self._db)
+        return user
+    
+    #To create a non-super user
+    def create_user(self, email=None, password=None, **extra_fields):
+        extra_fields.setdefault('is_staff', False) #Not staff
+        extra_fields.setdefault('is_superuser', False)
+        return self._create_user(email, password, **extra_fields)
+    
+    #For a super user
+    def create_superuser(self, email=None, password=None, **extra_fields):
+        extra_fields.setdefault('is_staff', True) #Is staff
+        extra_fields.setdefault('is_superuser', True) #Is super user
+        return self._create_user(email, password, **extra_fields)
+
+class User(AbstractBaseUser, PermissionsMixin):
     id = models.AutoField(primary_key=True) # Serial <-> AutoField
     username = models.CharField(max_length=100, unique=True) #Varchar=100<->CharField
     password = models.TextField()
@@ -141,10 +177,30 @@ class User(models.Model):
     last_logged_in = models.DateTimeField(null=True, blank=True)
     name = models.CharField(max_length=100)
 
+    #So we can log in
+    is_active = models.BooleanField(default=True)
+    #Typically a user has no privileged permissions
+    is_superuser = models.BooleanField(default=False)
+    is_staff = models.BooleanField(default=False)
     
+    #Refers to previous custom user manager
+    objects = CustomUserManager()
+
+    USERNAME_FIELD = 'username'
+    EMAIL_FIELD = 'email'
+    #Change?
+    REQUIRED_FIELDS = ["name"]
+
     class Meta:
         db_table = 'user' #Map to existing table
         #managed = False #We do not manage table
+
+    #Let us update the automatic name return functions
+    def get_full_name(self):
+        return self.name
+    
+    def get_short_name(self):
+        return self.name or self.email.split("@")[0]
 
     def __str__(self):
         return self.username 

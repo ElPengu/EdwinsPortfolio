@@ -38,9 +38,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.staticfiles', #Images, CSS, etc.
     'playground', #Created an app called playground
-    'mainsite', #Created an app called mainsite
-    'django.contrib.sites'
+    'mainsite', #Created an app called mainsite, holds custom user
+    'todolistsite', #App that holds to do lists
+    'django.contrib.sites',
+
 ]
+
+AUTH_USER_MODEL = 'mainsite.user' #What we will use 
+#as the model for users
+
+#On log out we redirect to the main page
+LOGOUT_REDIRECT_URL = 'mainsite/'
 
 SITE_ID = 1
 

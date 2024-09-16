@@ -14,8 +14,14 @@ from django.contrib import messages
 #To hash passwords
 from django.contrib.auth.hashers import make_password
 
+#For logging users in or out
+from django.contrib.auth import authenticate, login, logout
+
 #Import User model
-from .models import User as CustomUser
+from .models import User
+
+#For access to time
+from django.utils import timezone
 
 # Create your views here.
 # request -> response
@@ -31,7 +37,7 @@ def mainPageView(request):
 
 def successPageView(request):
 
-    return render(request, 'successPage.html')
+    return render(request, 'dashboardPage.html')
 
 #For registering a user
 def registerPageView(request):
@@ -47,7 +53,7 @@ def registerPageView(request):
         name1 = request.POST.get('name')
 
         if password == password1:
-            if CustomUser.objects.filter(email=email1).exists():
+            if User.objects.filter(email=email1).exists():
                 messages.info(request, 'Email is already registered with this site')
 
                 return redirect('registerPage')
@@ -57,7 +63,7 @@ def registerPageView(request):
                 hashedPwd=make_password(password)
 
                 #Create an instance of a model
-                user=CustomUser(
+                user=User(
                     username=username1,
                     email=email1,
                     password=hashedPwd,
@@ -66,9 +72,15 @@ def registerPageView(request):
                 #Instance of a model saved to database
                 user.save()
 
+                #Uncomment me plz
+                #Automatically log user in
+                login(request, user)
+                #Update user object to last logged in as now
+                user.last_logged_in = timezone.now()
+                user.save()
                 messages.success(request, "Successful registration")
                 print("We are here")
-                return redirect('successPage')
+                return redirect('dashboardPage')
         else:
             print("HEY")
             print(f"password={password}")
@@ -77,3 +89,44 @@ def registerPageView(request):
             return redirect('registerPage')
 
     return render(request, 'registerPage.html')
+
+def loginPageView(request):
+    if request.method == 'POST':
+        inputUsername = request.POST.get('username')
+        inputPassword = request.POST.get('password')
+        
+        user = authenticate(request, username=inputUsername,
+                            password=inputPassword)
+    
+        print(f"User is: {user}")
+
+        if user:
+            #Update user object to last logged in as now
+            user.last_logged_in = timezone.now()
+
+            #Save this
+            user.save()
+
+            #log the user in
+            login(request, user)
+            
+            messages.info(request, 'Successful log in!')
+            return redirect('dashboardPage')
+        else:
+            messages.info(request, 'Unsuccessful log in')
+            return redirect('loginPage')
+
+    return render(request, 'loginPage.html')
+
+#For logging out
+def logoutPageView(request):
+    logout(request)
+
+    messages.info(request, 'Successfully logged out!')
+
+    return redirect('mainPage')
+
+#Dashboard for logged in users
+def dashboardPageView(request):
+
+    return render(request, 'dashboardPage.html')

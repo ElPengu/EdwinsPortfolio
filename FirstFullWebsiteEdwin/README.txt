@@ -26,12 +26,19 @@ want to manage on the backend only
 in settings.py
 - Also grant privilege to the same one on user_id_seq tab of public in that database on pgadmin
 
+Test user:
+Username: test
+password: test
+email: test@test.com
+name: test
+
 Tasks to make website
 1. Add database for users on postgresql <- 10/9/2024
 2. Connect Django app to postgresql database WITHOUT managing table <- 10/9/2024
 3. Add basic functionality for a user to optionally register <- 11/9/2024
-4. Add basic functionality for a user to optionally log in <- WE ARE HERE
-5. Add front-end for to-do list for a user (ADD, DATE MADE, NAME, DESCRIPTION (OPTIONAL), COMPLETION)
+4. Add basic functionality for a user to optionally log in <- 13/9/2024
+5. Create a dash board for logged in users to create a to-do list if they want <- WE ARE HERE
+5. Add front-end for to-do list for a user (ADD, DATE MADE, NAME, DESCRIPTION (OPTIONAL), COMPLETION) 
 6. Add back-end for to-do list *- user
 7. Store password as environment variable
 8. Find out how to make migrations AUTOMATIC!
