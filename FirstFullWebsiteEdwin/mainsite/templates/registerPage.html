@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<!--Extend from a base template-->
+{% extends 'dashboardBaseHTML.html '%}
+
+{% block content_dashboard %}
     <h1>Register here!</h1>
 
     {% for message in messages %}
@@ -46,5 +42,4 @@
             
         </form>
     </div>
-</body>
-</html>
+{% endblock %}

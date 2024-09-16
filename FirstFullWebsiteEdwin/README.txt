@@ -37,8 +37,9 @@ Tasks to make website
 2. Connect Django app to postgresql database WITHOUT managing table <- 10/9/2024
 3. Add basic functionality for a user to optionally register <- 11/9/2024
 4. Add basic functionality for a user to optionally log in <- 13/9/2024
-5. Create a dash board for logged in users to create a to-do list if they want <- WE ARE HERE
-5. Add front-end for to-do list for a user (ADD, DATE MADE, NAME, DESCRIPTION (OPTIONAL), COMPLETION) 
-6. Add back-end for to-do list *- user
-7. Store password as environment variable
-8. Find out how to make migrations AUTOMATIC!
+5. Create a dash board for logged in users to create a to-do list if they want <- 16/9/2024
+6. Extend html for logged in/out user and add dashboard <- WE ARE HERE
+7. Add front-end for to-do list for a user (ADD, DATE MADE, NAME, DESCRIPTION (OPTIONAL), COMPLETION) 
+8. Add back-end for to-do list *- user
+9. Store password as environment variable
+10. Find out how to make migrations AUTOMATIC!

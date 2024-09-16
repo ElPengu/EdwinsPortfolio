@@ -1,11 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Welcome to the to do list!</h1>
-</body>
-</html>
+<!--Extend from a base template-->
+{% extends 'dashboardBaseHTML.html '%}
+
+{% block content_dashboard %}
+    <h1>Welcome to the to-do list {{ user.name }}!</h1>
+
+    {% for message in messages %}
+
+    <h2>{{message}}</h2>
+
+    {% endfor %}
+
+    <!--Show all to-do list items-->
+    {% if todolistItemInstances %}
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Completed</th>
+                <th>Date created</th>
+                <th>Date completed</th>
+            </tr>
+        {% for itemInstance in todolistItemInstances%}
+            <tr>
+                <td>{{ itemInstance.title }}</td>
+                {% if itemInstance.description %}
+                <td>{{ itemInstance.description }}</td>
+                {% else %}
+                <td> No description</td>
+                {% endif %}
+                <td>{{ itemInstance.completed }}</td>
+                <td>{{ itemInstance.dateCreated }}</td>
+                <td>{{ itemInstance.dateCompleted }}</td>
+            </tr>  
+    
+        {% endfor %}
+        </table>
+    
+    {% else %}
+        <h1>No to-do list items</h1>
+    {% endif %}
+    
+
+    <!--To-do list form-->
+    <div class="ToDoListForm">
+        <form action="{% url 'todolistPage' %}" method="POST">
+            {% csrf_token %} <!--For all POST requests-->
+
+            <div class="title">
+                <p>Title: </p>
+                <input type="text" name="title">
+            </div>
+            <div class="description">
+                <p>description: </p>
+                <input type="text" name="description">
+            </div>
+            
+            <div class="submit">
+                <input type="submit" value="Add item">
+            </div>
+            
+        </form>
+    </div>
+{% endblock %}

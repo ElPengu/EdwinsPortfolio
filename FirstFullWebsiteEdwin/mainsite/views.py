@@ -29,18 +29,21 @@ from django.utils import timezone
 # action
 
 def mainPageView(request):
-    print("HEYY")
+    print("In mainPageView")
     #return main page  
     # 
     #Now we use html in templates  
-    return render(request, 'mainPage.html') 
+    return render(request, 'mainPage.html', {'user': request.user}) 
 
 def successPageView(request):
+    print("In successPageView")
 
     return render(request, 'dashboardPage.html')
 
 #For registering a user
 def registerPageView(request):
+    print("In registerPageView")
+
     #When we call this function, we will read a 
     #form
 
@@ -79,10 +82,9 @@ def registerPageView(request):
                 user.last_logged_in = timezone.now()
                 user.save()
                 messages.success(request, "Successful registration")
-                print("We are here")
+                
                 return redirect('dashboardPage')
         else:
-            print("HEY")
             print(f"password={password}")
             print(f"password1={password1}")
             messages.info(request, 'Passwords are not the same')
@@ -91,6 +93,8 @@ def registerPageView(request):
     return render(request, 'registerPage.html')
 
 def loginPageView(request):
+    print("In loginPageView")
+
     if request.method == 'POST':
         inputUsername = request.POST.get('username')
         inputPassword = request.POST.get('password')
@@ -120,6 +124,8 @@ def loginPageView(request):
 
 #For logging out
 def logoutPageView(request):
+    print("In logoutPageView")
+
     logout(request)
 
     messages.info(request, 'Successfully logged out!')
@@ -128,5 +134,6 @@ def logoutPageView(request):
 
 #Dashboard for logged in users
 def dashboardPageView(request):
+    print("In dashboardPageView")
 
     return render(request, 'dashboardPage.html')
