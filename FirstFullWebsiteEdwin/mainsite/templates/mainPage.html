@@ -1,24 +1,43 @@
 
 <!--Extend from a base template-->
-{% extends 'dashboardBaseHTML.html '%}
+{% extends 'base.html '%}
 
 {% block content_dashboard %}
-{% if user.is_authenticated %}
+    <!--Semantic tags are used to keep content organised
+        SEO
+        Screen readers for accessibility
 
+            <header> - introductor content. Title, logo, author information
+            <nav> - For navigation bar and links
+            <main> - This is the main content of the page
+                section, aside, article, div (generic)
+            <section> - dependent (on page) of content
+            <aside> - side content (author info, fun facts, quotes, external links, comments, etc)
+            <article> - independent content (on page)
+                E.g. news article, job post, blog post
+            <footer> - closing content (autho info, copywrite info, etc.)
+        
+        
+        -->
+
+
+
+        <h2>A section</h2>
+            {% if user.is_authenticated %}
+
+                
+                <h2>Welcome to the main page!</h2>
+
+                <h3>You are logged in</h3>
+
+                {{ user.is_authenticated }}
+
+
+            {% else %}
+                <h2>Welcome to the main page!</h2>
+
+                <h3>You are logged out</h3>
+                
+            {% endif %}
     
-    <h1>Welcome to the main page!</h1>
-
-    <h2>You are logged in</h2>
-
-    {{ user.is_authenticated }}
-
-
-{% else %}
-    <h1>Welcome to the main page!</h1>
-
-    <h2>You are logged out</h2>
-    
-
-{% endif %}
-
 {% endblock %}

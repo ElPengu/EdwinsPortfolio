@@ -16,3 +16,7 @@ def say_hello(request):
     # 
     #Now we use html in templates  
     return render(request, 'hello.html', {'name': 'Edwin'}) 
+
+def cssPlayground(request):
+
+    return render(request, 'cssPlayground.html')

@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Playground</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/playground/css/style.css' %}">
+</head>
+<body>
+
+    <!--Semantic tags are used to keep content organised
+    SEO
+    Screen readers for accessibility
+
+        <header> - introductor content. Title, logo, author information
+        <nav> - For navigation bar and links
+        <main> - This is the main content of the page
+            section, aside, article, div (generic)
+        <section> - dependent (on page) of content
+        <aside> - side content (author info, fun facts, quotes, external links, comments, etc)
+        <article> - independent content (on page)
+            E.g. news article, job post, blog post
+        <footer> - closing content (autho info, copywrite info, etc.)
+    
+    
+    -->
+    
+    <header>
+        <h1>Header</h1>
+    </header>
+
+    <nav class="navbar">
+
+    </nav>
+
+    <main>
+        <aside>
+            <h2>This is an aside</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores doloremque magni amet id repudiandae quae, nam obcaecati facere sit iste dignissimos, quasi impedit odio consequatur. Aliquam tenetur recusandae rerum ex.</p>
+        </aside>
+
+        <section>
+            <h2>This is a section</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At non sequi aut reiciendis, quam laudantium architecto iure in soluta quae, fuga dignissimos consequatur facere. Mollitia ab corporis iure aliquid. Placeat! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet amet voluptatem quisquam atque ad nesciunt itaque alias ea inventore, commodi sed. Soluta odit impedit, tenetur unde assumenda architecto. Expedita, et.</p>    
+        </section>
+
+        <article>
+            <h2>This is an article</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente fuga commodi, natus modi, vero dicta rem odit quisquam architecto, odio blanditiis explicabo? Minus rerum dolores porro, omnis aut sed quidem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore quas consequatur facere eos ullam nostrum a tempore deleniti consequuntur molestiae corrupti, corporis debitis dolor, sapiente sequi laborum ducimus at mollitia.</p>    
+        </article>
+    </main>
+
+    <footer>
+        <h1>Footer</h1>
+    </footer>
+</body>
+</html>

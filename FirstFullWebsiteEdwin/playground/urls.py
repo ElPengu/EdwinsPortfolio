@@ -5,5 +5,6 @@ from . import views
 
 #Spell properly
 urlpatterns = [
-    path('hello/', views.say_hello)
+    path('hello/', views.say_hello),
+    path('cssPlayground', views.cssPlayground),
 ]

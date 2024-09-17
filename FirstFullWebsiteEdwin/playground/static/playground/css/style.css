@@ -1,0 +1,65 @@
+/*
+Rule set (for now):
+- Use px for borders
+- Use % for stuff like width
+- Use rem (occasionally em) for font sizes 
+-->CONTEXT: em is font size relative 
+to font size of parent element, 
+rem is relative to font size of an 
+html element
+-->Source: https://blog.logrocket.com/using-em-vs-rem-css/
+
+*/
+
+*{
+    box-sizing: border-box; /*Width now factors padding*/
+} /*Applies to all elements*/
+
+body {
+    margin: 0px; /*No margin around body*/
+}
+
+header {
+    background-color: lightgray;
+    text-align: center; 
+    padding: 25px; /*I don't think using px is good*/
+}
+
+.navbar {
+    background-color: darkgray;
+    height: 50px;
+}
+
+aside {
+    width: 20%;
+    float: left; /*Aside floats left*/
+    padding: 10px;
+}
+
+section {
+    width: 40%;
+    float: left;
+    padding: 10px
+}
+
+article {
+    width: 40%;
+    float: left;
+    padding: 10px
+}
+
+footer {
+    display: block;
+    clear: both; /*Clears block on left and right!*/
+    background-color: lightgray;
+    text-align: center; 
+    padding: 25px; /*I don't think using px is good*/
+}
+
+/*For small screens*/
+@media screen and (max-width: 600px){
+    aside, section, article {
+        width: 100%; 
+        /*Check what happens to the page if the screen is smaller!*/
+    }
+}
