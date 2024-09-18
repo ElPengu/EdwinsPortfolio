@@ -1,7 +1,42 @@
+/*
+Rule set (for now):
+- Use px for borders
+- Use % for stuff like width
+- Use rem (occasionally em) for font sizes 
+-->CONTEXT: em is font size relative 
+to font size of parent element, 
+rem is relative to font size of an 
+html element
+-->Source: https://blog.logrocket.com/using-em-vs-rem-css/
+
+*/
+
 /*We want width to take 
 padding into account!*/
 *{
     box-sizing: border-box;
+}
+
+/*Generic styling*/
+/*Generic button styling*/
+.button {
+    background-color: blue;
+    border-radius: 25px; /*To round the corners*/
+    font-weight: bold;
+    color: white;
+    text-align: center; /*So that text is centered*/
+    cursor: pointer; /*On hover the mouse points to it!*/ 
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/*Generic button div styling*/
+.buttonDiv {
+    text-align: center; /*All text elements align to centre of their space*/
+    padding: 5px 5px; /*Left number is vertical, right is hozirontal*/
+    justify-content: space-between; /*outer div spans entire width (so horizontal version of
+    align items)*/
+    align-items: center; /*Centres elements inside vertically*/
 }
 
 /*We set no margin around
@@ -10,6 +45,7 @@ body {
     margin: 0px;
 }
 
+/*BASE HTML STUFF*/
 header {
     background-color: darkslategrey;
     text-align: center; /*Text inside centres inside*/
@@ -37,6 +73,18 @@ header {
 
 }
 
+/*We override some attributes for navbar buttons*/
+.navbar .button {
+    background-color: lightblue !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    }
+
+/*Override padding on outer button divs in navbar*/
+.navbar .buttonDiv{
+    padding: 0px !important;
+}
+
 main {
 
     min-height: 50%; /*Let us minimally take this amount of the height*/
@@ -62,12 +110,6 @@ main article {
     padding: 0px 20px;
 }
 
-/*Login page stuff*/
-main .login {
-    width: 100%;
-}
-
-
 footer {
     background-color: darkslategrey;
     text-align: center; /*Text inside centres inside*/
@@ -75,4 +117,32 @@ footer {
 
     
     min-height: 20%; /*Let us minimally take this amount of the height*/
+}
+
+
+/*Login page stuff*/
+main .login {
+    width: 100%;
+}
+
+main .submit {
+    padding: 5px; /*Looks better like this*/
+}
+
+
+
+
+/*To do list page stuff*/
+.deleteButtons .button {
+    background-color: red !important; 
+    padding: 5px 10px;
+}
+
+.deleteButtons {
+    text-align: center; /*All text elements align to centre of their space*/
+    padding: 5px 5px; /*Left number is vertical, right is hozirontal*/
+    justify-content: space-between; /*outer div spans entire width (so horizontal version of
+    align items)*/
+    align-items: center; /*Centres elements inside vertically*/
+
 }

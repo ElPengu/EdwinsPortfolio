@@ -19,6 +19,7 @@
                 <th>Completed</th>
                 <th>Date created</th>
                 <th>Date completed</th>
+                <th>Delete item</th>
             </tr>
         {% for itemInstance in todolistItemInstances%}
             <tr>
@@ -31,6 +32,17 @@
                 <td>{{ itemInstance.completed }}</td>
                 <td>{{ itemInstance.dateCreated }}</td>
                 <td>{{ itemInstance.dateCompleted }}</td>
+                <td>
+                    <form action="{% url 'todolistPage' %}" method="POST">
+                        {% csrf_token %} <!--To register user-->
+                        <!--We pass the id of the itemInstance-->
+                        <input type="hidden" name="itemInstanceID" value={{itemInstance.id}}>
+                        
+                        <div class="deleteButtons">
+                            <input type="submit" name="formType" class="button" value="Delete item">
+                        </div>
+                    </form>
+                </td>
             </tr>  
     
         {% endfor %}
@@ -51,12 +63,13 @@
                 <input type="text" name="title">
             </div>
             <div class="description">
-                <p>description: </p>
+                <p>Description: </p>
                 <input type="text" name="description">
             </div>
-            
-            <div class="submit">
-                <input type="submit" value="Add item">
+            <div class="buttonDiv">
+                <div class="submit">
+                    <input type="submit" name="formType" class="button" value="Add item">
+                </div>
             </div>
             
         </form>

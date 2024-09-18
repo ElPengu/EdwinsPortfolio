@@ -36,26 +36,37 @@ def todolistPageView(request):
 
     #If we read a POST
     if request.method=='POST':
-        title1 = request.POST.get('title')
-        description1 = request.POST.get('description')
+        #Find the type of form this is
+        formType = request.POST.get('formType')
+        print(f"formType: {formType}")
+        if formType == "Add item":
 
-        #We can only add items with a non-empty title
-        #Description may be non-empty
-        if title1 == None or len(title1) == 0:
-            messages.info(request, 'Failed to add to-do list item. The title must not be empty')
-        else:
-            #Create instance of a model
-            todolistItem = todoListItem(
-                user_id=user,
-                title=title1,
-                description=description1
-            )
+            title1 = request.POST.get('title')
+            description1 = request.POST.get('description')
 
-            #Save this instance of the model
-            todolistItem.save()
-            
-            messages.info(request, 'To-do list item added!')
+            #We can only add items with a non-empty title
+            #Description may be non-empty
+            if title1 == None or len(title1) == 0:
+                messages.info(request, 'Failed to add to-do list item. The title must not be empty')
+            else:
+                #Create instance of a model
+                todolistItem = todoListItem(
+                    user_id=user,
+                    title=title1,
+                    description=description1
+                )
 
+                #Save this instance of the model
+                todolistItem.save()
+                
+                messages.info(request, 'To-do list item added!')
+        elif formType == "Delete item":
+            todolistItemID = request.POST.get('itemInstanceID')
+            print(f"todolistItemID: {todolistItemID}")
+
+            #Now we delete the instance by this id (primary key)
+            todolistItemInstance = todoListItem.objects.get(pk=todolistItemID)
+            todolistItemInstance.delete()
         return redirect('todolistPage')
 
     #Now we use html in templates  

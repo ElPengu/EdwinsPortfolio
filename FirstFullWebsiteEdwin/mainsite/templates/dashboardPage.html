@@ -8,11 +8,19 @@
     
     <!--To access to do list -->
     <div class="Dashboard">
-        <a href="{% url 'todolistPage' %}">To-do list</a>
+        <div class="buttonDiv">
+        <a href="{% url 'todolistPage' %}">
+            <button class="button">To-do list</button>
+        </a>
+        </div>
     </div>
 
     <div class="Log out">
-        <a href="{% url 'logoutPage' %}">Log out</a>
+        <div class="buttonDiv">
+        <a href="{% url 'logoutPage' %}">
+            <button class="button"> Log out</button>
+        </a>
+        </div>
     </div>
 
 {% endblock %}

@@ -7,6 +7,7 @@
     <title>Gaitho's site</title>
     {% load static %}
     <link rel="stylesheet" href="{% static '/mainsite/css/style.css' %}">
+    <script src="{% static '/mainsite/js/baseJS.js' %}"></script>
 </head>
 <body>
     <!--Semantic tags are used to keep content organised
@@ -29,26 +30,34 @@
         <header>
             <h1>Header</h1>
         </header>
-        
+
         <nav class="navbar">
-            <div class="registerPageNav">
-                <a href="{% url 'registerPage' %}">Register</a>
-            </div>
+                <div class="buttonDiv">
+                    <a href="{% url 'registerPage' %}">
+                        <button class="button" id="registerPageButton" onclick="clickNavbarButton(this.id)">Register</button>
+                    </a>
+                </div>
             
-            <div class="loginPageNav">
-                <a href="{% url 'loginPage' %}">Log in</a>
-            </div>
+                <div class="buttonDiv">
+                    <a href="{% url 'loginPage' %}">
+                        <button class="button" id="loginPageButton" onclick="clickNavbarButton(this.id)">Log in</button>
+                    </a>
+                </div>
             
             
-            <div class="todolistPageNav">
-                <!--To access to do list -->
-                <a href="{% url 'todolistPage' %}">To-do list</a>
-            </div>
+                <div class="buttonDiv">
+                    <!--To access to do list -->
+                    <a href="{% url 'todolistPage' %}">
+                        <button class="button" id="todolistPageButton" onclick="clickNavbarButton(this.id)">To-do list</button>
+                    </a>
+                </div>
             
 
-            <div class="logoutPageNav">
-                <a href="{% url 'logoutPage' %}">Log out</a>
-            </div>
+                <div class="buttonDiv">
+                    <a href="{% url 'logoutPage' %}">
+                        <button class="button" id="logoutPageButton" onclick="clickNavbarButton(this.id)">Log out</button>
+                    </a>
+                </div>
                 
         </nav>
         

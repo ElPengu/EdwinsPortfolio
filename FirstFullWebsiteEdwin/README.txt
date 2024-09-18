@@ -40,9 +40,12 @@ Tasks to make website
 5. Create a dash board for logged in users to create a to-do list if they want <- 16/9/2024
 6. Extend html for user and add dashboard <- 16/9/2024
 7. Add basic front-end for website in general <- 17/9/2024
-8. Implement buttons for navigation bar (front-end stuff) <- WE ARE HERE
-9. Implement front end on to-do list page for a user (front-end stuff)
+8. Implement buttons for navigation bar (front-end stuff) <- 18/9/2024
+9. Implement front end on to-do list page for a user to delete an item (front-end stuff) <- 18/9/2024
+10. Implement front end on to-do list page for a user to edit an item (front-end stuff) <- WE ARE HERE
 10. Add back-end for to-do list *- user
 11. Store password as environment variable
 12. Find out how to make migrations AUTOMATIC!
 13. Lock out users from the playground app
+14. Use JavaScript to alter navigation bar based on whether you are signed in or signed out
+14. Use JavaScript to enable change between English and Kiswahili
