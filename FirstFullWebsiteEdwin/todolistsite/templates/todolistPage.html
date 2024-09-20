@@ -12,26 +12,28 @@
 
     <!--Show all to-do list items-->
     {% if todolistItemInstances %}
-        <table>
+        <table class="editableItems" id="editableItems">
             <tr>
+                <th class="hidden">Item ID</th>
                 <th>Title</th>
                 <th>Description</th>
                 <th>Completed</th>
                 <th>Date created</th>
                 <th>Date completed</th>
-                <th>Delete item</th>
+                <th>Update item</th>
             </tr>
         {% for itemInstance in todolistItemInstances%}
             <tr>
-                <td>{{ itemInstance.title }}</td>
+                <td class="hidden">{{ itemInstance.id }} </td>
+                <td onclick="editTodolistitem()">{{ itemInstance.title }}</td>
                 {% if itemInstance.description %}
-                <td>{{ itemInstance.description }}</td>
+                <td onclick="editTodolistitem()">{{ itemInstance.description }}</td>
                 {% else %}
-                <td> No description</td>
+                <td onclick="editTodolistitem()"> No description</td>
                 {% endif %}
-                <td>{{ itemInstance.completed }}</td>
-                <td>{{ itemInstance.dateCreated }}</td>
-                <td>{{ itemInstance.dateCompleted }}</td>
+                <td onclick="editTodolistitem()">{{ itemInstance.completed }}</td>
+                <td onclick="editTodolistitem()">{{ itemInstance.dateCreated }}</td>
+                <td onclick="editTodolistitem()">{{ itemInstance.dateCompleted }}</td>
                 <td>
                     <form action="{% url 'todolistPage' %}" method="POST">
                         {% csrf_token %} <!--To register user-->
@@ -39,12 +41,60 @@
                         <input type="hidden" name="itemInstanceID" value={{itemInstance.id}}>
                         
                         <div class="deleteButtons">
-                            <input type="submit" name="formType" class="button" value="Delete item">
+                            <input type="submit" name="formType" class="button" value="Delete item" onclick="checker(event)">
                         </div>
                     </form>
                 </td>
-            </tr>  
-    
+            </tr>
+            <tr>
+                <form action="{% url 'todolistPage' %}" method="POST">
+                    {% csrf_token %} <!--To register user-->
+
+                    <!--We pass the id of the itemInstance-->
+                    <input type="hidden" name="itemInstanceID" value={{itemInstance.id}}>
+
+                    <td class="hidden">{{ itemInstance.id }} </td>
+                    <td onclick="editTodolistitem()">
+                        <input type="text" name="title" value="{{ itemInstance.title }}">
+                    </td>
+                    {% if itemInstance.description %}
+                    <td onclick="editTodolistitem()">
+                        <input type="text" name="description" value="{{ itemInstance.description }}">
+                    </td>
+                    {% else %}
+                    <td onclick="editTodolistitem()"> 
+                        <input type="text" name="description" value="No description">
+                    </td>
+                    {% endif %}
+                    {% if itemInstance.completed == False %}
+                    <td>
+                        <label for="Completed task">Completed task</label>
+                        <select name="Completed task" id="Completed task">
+                            <option value="False">False</option>
+                            <option value="True">True</option>
+                        </select>
+                    </td>
+                    {% else %}
+                    <td>
+                        <label for="Completed task">Completed task</label>
+                        <select name="Completed task" id="Completed task">
+                            <option value="True">True</option>
+                            <option value="False">False</option>
+                        </select>
+                    </td>
+                    {% endif %}
+                    <td>
+                        {{ itemInstance.dateCreated }}
+                    </td>
+                    <td>
+                        {{ itemInstance.dateCompleted }}
+                    </td>
+                    <td>
+                        <input type="submit" name="formType" class="button" value="Update item">
+                    </td>
+                </form>
+            </tr>
+
         {% endfor %}
         </table>
     
@@ -73,5 +123,24 @@
             </div>
             
         </form>
+    </div>
+
+    <div id="EditToDoListItems">
+        <form action="{% url 'todolistPage' %}" method="POST">
+            {% csrf_token %} <!--For all POST requests-->
+            
+            <div class="buttonDiv">
+                <div class="submit">
+                    <input type="submit" name="formType" class="button" value="Confirm item edits">
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <div id="StopEditing">
+        <div class="buttonDiv">
+            <button class="button">Stop editing</button>
+        </div>
     </div>
 {% endblock %}

@@ -7,7 +7,7 @@
     <title>Gaitho's site</title>
     {% load static %}
     <link rel="stylesheet" href="{% static '/mainsite/css/style.css' %}">
-    <script src="{% static '/mainsite/js/baseJS.js' %}"></script>
+    <script src="{% static '/mainsite/js/baseJS.js' %}" defer></script>
 </head>
 <body>
     <!--Semantic tags are used to keep content organised
@@ -26,10 +26,13 @@
     
     
     -->
-
+        
+        
+        
         <header>
             <h1>Header</h1>
         </header>
+        
 
         <nav class="navbar">
                 <div class="buttonDiv">
@@ -57,6 +60,12 @@
                     <a href="{% url 'logoutPage' %}">
                         <button class="button" id="logoutPageButton" onclick="clickNavbarButton(this.id)">Log out</button>
                     </a>
+                </div>
+
+                <div class="buttonDiv">
+                    <button class="button" id="languageSwitch" onclick="languageSwitch()">
+                        English
+                    </button>
                 </div>
                 
         </nav>

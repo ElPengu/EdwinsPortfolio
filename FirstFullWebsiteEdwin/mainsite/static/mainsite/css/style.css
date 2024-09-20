@@ -20,7 +20,7 @@ padding into account!*/
 /*Generic styling*/
 /*Generic button styling*/
 .button {
-    background-color: blue;
+    background-color: lightblue;
     border-radius: 25px; /*To round the corners*/
     font-weight: bold;
     color: white;
@@ -37,6 +37,11 @@ padding into account!*/
     justify-content: space-between; /*outer div spans entire width (so horizontal version of
     align items)*/
     align-items: center; /*Centres elements inside vertically*/
+}
+
+/*For hidden elements*/
+.hidden {
+    display: none;
 }
 
 /*We set no margin around
@@ -75,10 +80,11 @@ header {
 
 /*We override some attributes for navbar buttons*/
 .navbar .button {
-    background-color: lightblue !important;
+    background-color: blue !important;
     padding-top: 0px !important;
     padding-bottom: 0px !important;
     }
+
 
 /*Override padding on outer button divs in navbar*/
 .navbar .buttonDiv{
@@ -145,4 +151,18 @@ main .submit {
     align items)*/
     align-items: center; /*Centres elements inside vertically*/
 
+}
+
+/*To edit an item in the table*/
+.editableItems tr td {
+    cursor: pointer; /*On hover the mouse points to it!*/
+}
+
+/*By default, hide edit item option*/
+#EditToDoListItems {
+    display: none;
+}
+
+#StopEditing {
+    display: none;
 }

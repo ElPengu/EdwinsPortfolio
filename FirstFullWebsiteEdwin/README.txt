@@ -42,10 +42,14 @@ Tasks to make website
 7. Add basic front-end for website in general <- 17/9/2024
 8. Implement buttons for navigation bar (front-end stuff) <- 18/9/2024
 9. Implement front end on to-do list page for a user to delete an item (front-end stuff) <- 18/9/2024
-10. Implement front end on to-do list page for a user to edit an item (front-end stuff) <- WE ARE HERE
-10. Add back-end for to-do list *- user
-11. Store password as environment variable
-12. Find out how to make migrations AUTOMATIC!
-13. Lock out users from the playground app
-14. Use JavaScript to alter navigation bar based on whether you are signed in or signed out
-14. Use JavaScript to enable change between English and Kiswahili
+10. Implement front end on to-do list page for a user to edit an item (front-end stuff) <- 20/9/2024
+11. Implement JS so that a user must confirm before deleting an item  <- We are here
+
+Tickets
+- Add back-end for to-do list *- user
+- Store password as environment variable
+- Find out how to make migrations AUTOMATIC!
+- Lock out users from the playground app
+- Use JavaScript to alter navigation bar based on whether you are signed in or signed out
+- Use JavaScript to enable change between English and Kiswahili
+- Add a dividing line between rows in to-do list

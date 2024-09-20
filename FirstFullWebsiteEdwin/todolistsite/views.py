@@ -62,11 +62,21 @@ def todolistPageView(request):
                 messages.info(request, 'To-do list item added!')
         elif formType == "Delete item":
             todolistItemID = request.POST.get('itemInstanceID')
-            print(f"todolistItemID: {todolistItemID}")
 
             #Now we delete the instance by this id (primary key)
             todolistItemInstance = todoListItem.objects.get(pk=todolistItemID)
             todolistItemInstance.delete()
+        elif formType == "Update item":
+            todolistItemID = request.POST.get('itemInstanceID')
+
+            #Now we update the instance's title and description by this id (primary key)
+            todolistItemInstance = todoListItem.objects.get(pk=todolistItemID)
+            
+            todolistItemInstance.title = request.POST.get('title')
+            todolistItemInstance.description = request.POST.get('description')
+            todolistItemInstance.completed = request.POST.get('Completed task')
+
+            todolistItemInstance.save()
         return redirect('todolistPage')
 
     #Now we use html in templates  
