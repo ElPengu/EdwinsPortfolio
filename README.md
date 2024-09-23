@@ -11,9 +11,13 @@ example
 If you have any issues with step 4, it is probably due to import faults. In this case, you must
 import them. E.g., "py -m pip install Django".
 
-To user the website, you can either create an account, or use the following details
-- username: testuser
-- password: testuserpass
+To use the website, you have two options
+1. Use the already-made account
+2. Failing (1), register a new fake account
+
+Already made account
+- Username: testuser
+- Password: testuserpass
 
 
 
