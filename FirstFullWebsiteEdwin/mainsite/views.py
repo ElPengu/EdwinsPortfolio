@@ -94,6 +94,10 @@ def registerPageView(request):
 
 def loginPageView(request):
     print("In loginPageView")
+    
+    #We do not log in an already logged in user
+    if request.user.is_authenticated:
+        return redirect(mainPageView)
 
     if request.method == 'POST':
         inputUsername = request.POST.get('username')
@@ -126,6 +130,10 @@ def loginPageView(request):
 def logoutPageView(request):
     print("In logoutPageView")
 
+    #If user is not authenticated, redirect to log in
+    if request.user.is_authenticated != True:
+        return redirect(loginPageView)
+
     logout(request)
 
     messages.info(request, 'Successfully logged out!')
@@ -137,3 +145,6 @@ def dashboardPageView(request):
     print("In dashboardPageView")
 
     return render(request, 'dashboardPage.html')
+
+def nonsuperuserPageView(request):
+    return render(request, 'nonsuperuserPage.html')

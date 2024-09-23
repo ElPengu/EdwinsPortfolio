@@ -12,6 +12,8 @@ urlpatterns = [
     path('success/', views.successPageView, name='successPage'),
     path('dashboard/', views.dashboardPageView, name='dashboardPage'),
     #For to-do list stuff
-    path('todolist', include('todolistsite.urls')),
+    path('todolist/', include('todolistsite.urls')),
+    #If a user tries to do superuser stuff
+    path('nonsuperuser/', views.nonsuperuserPageView, name='nonsuperuserPage'),
     
 ]

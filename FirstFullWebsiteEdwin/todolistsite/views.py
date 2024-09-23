@@ -31,6 +31,10 @@ from django.utils import timezone
 def todolistPageView(request):
     print("In to do list Page View")
 
+    #If the user is not logged in, redirect to log in
+    if request.user.is_authenticated != True:
+        return redirect('loginPage')
+
     #To access user attributes
     user = request.user
 

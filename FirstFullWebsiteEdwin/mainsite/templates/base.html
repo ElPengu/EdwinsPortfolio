@@ -33,8 +33,31 @@
             <h1>Header</h1>
         </header>
         
+        {% if user.is_authenticated %}
+            <nav class="navbarIN">
+                    <div class="buttonDiv">
+                        <!--To access to do list -->
+                        <a href="{% url 'todolistPage' %}">
+                            <button class="button" id="todolistPageButton" onclick="clickNavbarButton(this.id)">To-do list</button>
+                        </a>
+                    </div>
+                
 
-        <nav class="navbar">
+                    <div class="buttonDiv">
+                        <a href="{% url 'logoutPage' %}">
+                            <button class="button" id="logoutPageButton" onclick="clickNavbarButton(this.id)">Log out</button>
+                        </a>
+                    </div>
+
+                    <div class="buttonDiv">
+                        <button class="button" id="languageSwitch" onclick="languageSwitch()">
+                            English
+                        </button>
+                    </div>
+                    
+            </nav>
+        {% else %}
+            <nav class="navbarOUT">
                 <div class="buttonDiv">
                     <a href="{% url 'registerPage' %}">
                         <button class="button" id="registerPageButton" onclick="clickNavbarButton(this.id)">Register</button>
@@ -46,21 +69,6 @@
                         <button class="button" id="loginPageButton" onclick="clickNavbarButton(this.id)">Log in</button>
                     </a>
                 </div>
-            
-            
-                <div class="buttonDiv">
-                    <!--To access to do list -->
-                    <a href="{% url 'todolistPage' %}">
-                        <button class="button" id="todolistPageButton" onclick="clickNavbarButton(this.id)">To-do list</button>
-                    </a>
-                </div>
-            
-
-                <div class="buttonDiv">
-                    <a href="{% url 'logoutPage' %}">
-                        <button class="button" id="logoutPageButton" onclick="clickNavbarButton(this.id)">Log out</button>
-                    </a>
-                </div>
 
                 <div class="buttonDiv">
                     <button class="button" id="languageSwitch" onclick="languageSwitch()">
@@ -68,8 +76,10 @@
                     </button>
                 </div>
                 
-        </nav>
-        
+            </nav>
+
+        {% endif %}
+
         <main>
 
             <aside>

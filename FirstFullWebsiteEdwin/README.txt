@@ -47,9 +47,17 @@ Tasks to make website
 12. Add back-end for to-do list *- user <- 20/09/2024
 13. Find out how to make migrations (front-end -> back-end) AUTOMATIC! <- 20/09/2024
 14. Store password as environment variable <- 20/09/2024
-15. Lock out users from the playground app <- WE ARE HERE
+15. Lock out users from the playground app <- 23/09/2024
+16. Prevent an already logged in user from logging another account <- 23/09/2024
+17. Recorded website to show how it looks as of now! <- 23/09/2024
+18. Alter navigation bar based on whether you are signed in or signed out <- 23/09/2024
 
 Tickets
-- Use JavaScript to alter navigation bar based on whether you are signed in or signed out
 - Use JavaScript to enable change between English and Kiswahili
 - Add a dividing line between rows in to-do list
+- Set a good colour scheme for website
+- Investigate how to design a personal website
+- Investigate how to design a good website in general
+- Find out web design practises with highest ROI by seeing how to 
+- Publish website for others to access
+- Showcase important info AND video on main page for all to see!

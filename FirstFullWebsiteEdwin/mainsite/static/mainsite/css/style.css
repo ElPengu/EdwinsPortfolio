@@ -58,7 +58,7 @@ header {
     min-height: 20%; /*Let us minimally take this amount of the height*/
 }
 
-.navbar {
+.navbarIN, .navbarOUT {
     background-color: slategray;
     text-align: center; /*All text elements align to centre of their space*/
     padding: 15px 15px; /*Left number is vertical, right is hozirontal*/
@@ -71,7 +71,7 @@ header {
     min-height: 10%; /*Let us take this amount of the height*/
 }
 
-.navbar div {
+.navbarIN div, .navbarOUT div {
     float: left;
     width: 25%;
     flex-basis: 25%;  /* Each element takes 25% of the available space */
@@ -79,7 +79,7 @@ header {
 }
 
 /*We override some attributes for navbar buttons*/
-.navbar .button {
+.navbarIN .button, .navbarOUT .button {
     background-color: blue !important;
     padding-top: 0px !important;
     padding-bottom: 0px !important;
@@ -87,7 +87,7 @@ header {
 
 
 /*Override padding on outer button divs in navbar*/
-.navbar .buttonDiv{
+.navbarIN .buttonDiv, .navbarOUT .buttonDiv{
     padding: 0px !important;
 }
 

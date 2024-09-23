@@ -1,0 +1,30 @@
+<!--Extend from a base template-->
+{% extends 'base.html '%}
+
+{% block content_dashboard %}
+
+<h1>Invalid attempt to access playground app</h1>
+
+<p>You are not a superuser, so you cannot access the playground app {{ user.name }}!</p>
+
+<p>You may go back to the main page, or you can log out and log back in with a superuser account</p>
+
+    <!--To access to do list -->
+    <div class="Dashboard">
+        <div class="buttonDiv">
+        <a href="{% url 'mainPage' %}">
+            <button class="button">Main page</button>
+        </a>
+        </div>
+    </div>
+
+    <div class="Log out">
+        <div class="buttonDiv">
+        <a href="{% url 'logoutPage' %}">
+            <button class="button"> Log out</button>
+        </a>
+        </div>
+    </div>
+
+
+{% endblock %}
