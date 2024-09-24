@@ -52,14 +52,14 @@ body {
 
 /*BASE HTML STUFF*/
 header {
-    background-color: darkslategrey;
+    background-color: lightblue;
     text-align: center; /*Text inside centres inside*/
     padding: 25px;/*Pads around the header*/
     min-height: 20%; /*Let us minimally take this amount of the height*/
 }
 
 .navbarIN, .navbarOUT {
-    background-color: slategray;
+    background-color: lightgrey;
     text-align: center; /*All text elements align to centre of their space*/
     padding: 15px 15px; /*Left number is vertical, right is hozirontal*/
     display: flex; /*Lets items inside grow or shrink in proportion to each other*/
@@ -99,25 +99,27 @@ main {
 }
 
 main aside {
-    width: 20%;
+    background-color: ghostwhite;
+    width: 25%;
     float: left; /*Floats to left of other elements*/
     padding: 0px 20px;
 }
 
 main section {
-    width: 55%;
+    width: 50%;
     float: left; /*Floats to left of other elements*/
     padding: 0px 20px;
 }
 
 main article {
+    background-color: ghostwhite;
     width: 25%;
     float: left; /*Floats to left of other elements*/
     padding: 0px 20px;
 }
 
 footer {
-    background-color: darkslategrey;
+    background-color: lightblue;
     text-align: center; /*Text inside centres inside*/
     padding: 25px;/*Pads around the header*/
 
@@ -165,4 +167,14 @@ main .submit {
 
 #StopEditing {
     display: none;
+}
+
+
+
+/*For small screens*/
+@media screen and (max-width: 600px){
+    aside, section, article {
+        width: 100%; 
+        /*Check what happens to the page if the screen is smaller!*/
+    }
 }

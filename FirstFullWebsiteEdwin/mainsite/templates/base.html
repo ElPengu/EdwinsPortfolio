@@ -30,7 +30,7 @@
         
         
         <header>
-            <h1>Header</h1>
+            <h1>Donkey site</h1>
         </header>
         
         {% if user.is_authenticated %}
@@ -83,30 +83,41 @@
         <main>
 
             <aside>
-                <h2>An aside</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, consectetur ab. Ducimus magni recusandae repellendus quos et perferendis inventore est? Ipsam omnis pariatur exercitationem voluptates libero, fugit distinctio molestias eveniet?</p>
+                <h2 class="hidden">An aside</h2>
+                <h1>
+                    Here are some fun facts
+                </h1>
+                <ul>
+                    <li>Improving 1% every day in something results in 37 times improvement in a year (this is a mathematical fact)</li>
+                    <li>Scientific studies have found that daily meditation can enhance your memory and attention</li>
+                </ul>
             </aside>
             <!--Create a block-->
             
             <section>
+                <h2 class="hidden">A section</h2>
+                {% for message in messages %}
+
+                <h1>{{message}}</h1>
+
+                {% endfor %}
                 {% block content_dashboard %}
 
                 {% endblock %}
                 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga molestias accusantium porro hic et qui odio numquam, placeat iste ipsa esse ducimus autem? Officiis enim delectus quos unde doloribus ex.</p>
-
-
             </section>
 
             <article>
-                <h2>An article</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, suscipit non expedita odit nisi quasi harum reprehenderit quis temporibus cum praesentium amet, eaque id laboriosam rerum, sint autem ipsum qui.</p>
+                <h2 class="hidden">An article</h2>
+                <h1>What is the purpose of this site?</h1>
+                <p>This is a site for you to explore what I can do. Beyond that, use it as you wish!</p>
             </article>
 
         </main>
 
         <footer>
-            <h1>Footer</h1>
+            <h1>Contact us</h1>
+            Edwin.nganga2003@gmail.com
         </footer>
 
     

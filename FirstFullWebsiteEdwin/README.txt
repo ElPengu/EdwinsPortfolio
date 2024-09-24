@@ -51,6 +51,7 @@ Tasks to make website
 16. Prevent an already logged in user from logging another account <- 23/09/2024
 17. Recorded website to show how it looks as of now! <- 23/09/2024
 18. Alter navigation bar based on whether you are signed in or signed out <- 23/09/2024
+19. Optimise main page by removing the filler stuff <- 24/09/2024
 
 Tickets
 - Use JavaScript to enable change between English and Kiswahili
@@ -60,4 +61,7 @@ Tickets
 - Investigate how to design a good website in general
 - Find out web design practises with highest ROI by seeing how to 
 - Publish website for others to access
-- Showcase important info AND video on main page for all to see!
+- Ensure that article, section, and aside do not squash over each other when window changes size
+- When you 'complete' task, set Date completed to the current date, if set back to false, set back to None
+- Require confirmation for update, just like for delete
+- Have update item expand editable items when you click (on something)
