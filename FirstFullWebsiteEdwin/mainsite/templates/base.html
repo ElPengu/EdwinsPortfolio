@@ -36,16 +36,15 @@
         {% if user.is_authenticated %}
             <nav class="navbarIN">
                     <div class="buttonDiv">
-                        <!--To access to do list -->
-                        <a href="{% url 'todolistPage' %}">
-                            <button class="button" id="todolistPageButton" onclick="clickNavbarButton(this.id)">To-do list</button>
-                        </a>
-                    </div>
-                
-
-                    <div class="buttonDiv">
                         <a href="{% url 'logoutPage' %}">
                             <button class="button" id="logoutPageButton" onclick="clickNavbarButton(this.id)">Log out</button>
+                        </a>
+                    </div>
+
+                    <div class="buttonDiv">
+                        <!--To access to do list -->
+                        <a href="{% url 'dashboardPage' %}">
+                            <button class="button" id="dashboardPageButton" onclick="clickNavbarButton(this.id)">Dashboard</button>
                         </a>
                     </div>
 

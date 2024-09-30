@@ -6,19 +6,13 @@
         <h1>Welcome to your dashboard {{ user.name }}!</h1>
     </div>
     
+    <p>Feel free to explore any of these applications</p>
+
     <!--To access to do list -->
     <div class="Dashboard">
         <div class="buttonDiv">
         <a href="{% url 'todolistPage' %}">
             <button class="button">To-do list</button>
-        </a>
-        </div>
-    </div>
-
-    <div class="Log out">
-        <div class="buttonDiv">
-        <a href="{% url 'logoutPage' %}">
-            <button class="button"> Log out</button>
         </a>
         </div>
     </div>

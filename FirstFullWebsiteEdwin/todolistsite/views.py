@@ -42,7 +42,6 @@ def todolistPageView(request):
     if request.method=='POST':
         #Find the type of form this is
         formType = request.POST.get('formType')
-        print(f"formType: {formType}")
         if formType == "Add item":
 
             title1 = request.POST.get('title')
@@ -79,6 +78,8 @@ def todolistPageView(request):
             todolistItemInstance.title = request.POST.get('title')
             todolistItemInstance.description = request.POST.get('description')
             todolistItemInstance.completed = request.POST.get('Completed task')
+            if request.POST.get('Date completed'):
+                todolistItemInstance.dateCompleted = request.POST.get('Date completed')
 
             todolistItemInstance.save()
         return redirect('todolistPage')

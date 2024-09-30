@@ -32,6 +32,10 @@ password: test
 email: test@test.com
 name: test
 
+
+
+
+
 Tasks to make website
 1. Add database for users on postgresql <- 10/9/2024
 2. Connect Django app to postgresql database WITHOUT managing table <- 10/9/2024
@@ -52,16 +56,54 @@ Tasks to make website
 17. Recorded website to show how it looks as of now! <- 23/09/2024
 18. Alter navigation bar based on whether you are signed in or signed out <- 23/09/2024
 19. Optimise main page by removing the filler stuff <- 24/09/2024
+20. Add a dividing line between rows in to-do list <- 26/09/2024
+21. When you 'complete' task, set Date completed to the chosen date <- 26/09/2024
+22. Require confirmation on update <- 26/09/2024
+23. Publish website for others to access <- WE ARE HERE
 
 Tickets
 - Use JavaScript to enable change between English and Kiswahili
-- Add a dividing line between rows in to-do list
 - Set a good colour scheme for website
 - Investigate how to design a personal website
 - Investigate how to design a good website in general
 - Find out web design practises with highest ROI by seeing how to 
-- Publish website for others to access
 - Ensure that article, section, and aside do not squash over each other when window changes size
-- When you 'complete' task, set Date completed to the current date, if set back to false, set back to None
 - Require confirmation for update, just like for delete
 - Have update item expand editable items when you click (on something)
+
+
+To deploy site (https://www.youtube.com/watch?v=xtnUwvjOThg&t=473s) DOESN'T WORK:
+Log into pythonanywhere
+Go to bash console
+"pwd"
+"git clone repository"
+Delete all irrelevant directories
+"mkvirtualenv --python=/usr/bin/python3.10 venv"
+"pip install django"
+Open new tab 2 and go to dashboard
+ENTER TAB 2- Add a new web app
+Select python 3.10
+Manual configuration
+Scroll down to virtualenv
+Input venv
+Go to wsgi file, should be above the virtualenv section
+Remove all but top to end of general debugging tips, and the Django section (so about lines 74-89)
+Uncomment lines according to video
+ENTER ORIGINAL TAB -Bash console
+cd into app so you see "db.sqlite3  manage.py"
+pwd and copy path, something like "/home/Pingu03/FirstFullWebsiteEdwin"
+ENTER TAB 2
+Set path = '/home/Pingu03/FirstFullWebsiteEdwin'
+SET TAB 3 -  WEB
+ENTER TAB 3
+Copy url, found somewhere like "Configuration for Pingu03.pythonanywhere.com"
+Copy url
+Go to Files
+Go to settings.py
+Update lines:
+"DEBUG = True
+
+ALLOWED_HOSTS = ['Pingu03.pythonanywhere.com']"
+ENTER TAB 2
+Set line to something like "os.environ['DJANGO_SETTINGS_MODULE'] = 'FirstFullWebsiteEdwin.settings'"
+

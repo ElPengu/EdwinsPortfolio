@@ -11,6 +11,17 @@ html element
 
 */
 
+/*For small screens*/
+@media screen and (max-width: 6000px){
+    aside, section, article {
+        width: 100% !important; 
+        /*Check what happens to the page if the screen is smaller!*/
+        float: none !important; /*Remove float*/
+        clear: both !important; /*clear any floats*/
+        flex-direction: column !important; 
+    }
+}
+
 /*We want width to take 
 padding into account!*/
 *{
@@ -37,6 +48,16 @@ padding into account!*/
     justify-content: space-between; /*outer div spans entire width (so horizontal version of
     align items)*/
     align-items: center; /*Centres elements inside vertically*/
+}
+
+/*Table styling*/
+table {
+    border-collapse: collapse; /* To merge adjacent borders */
+}
+
+.divider td {
+border-top: 1px solid black; /* Adds a line between rows */
+padding: 10px;
 }
 
 /*For hidden elements*/
@@ -171,10 +192,3 @@ main .submit {
 
 
 
-/*For small screens*/
-@media screen and (max-width: 600px){
-    aside, section, article {
-        width: 100%; 
-        /*Check what happens to the page if the screen is smaller!*/
-    }
-}

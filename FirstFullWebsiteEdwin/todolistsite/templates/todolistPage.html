@@ -17,7 +17,7 @@
                 <th>Update item</th>
             </tr>
         {% for itemInstance in todolistItemInstances%}
-            <tr>
+            <tr class="divider">
                 <td class="hidden">{{ itemInstance.id }} </td>
                 <td onclick="editTodolistitem()">{{ itemInstance.title }}</td>
                 {% if itemInstance.description %}
@@ -81,10 +81,12 @@
                         {{ itemInstance.dateCreated }}
                     </td>
                     <td>
-                        {{ itemInstance.dateCompleted }}
+                        <label for="Date completer">Date completed</label>
+                        <input type="date" name="Date completed" value="{{ itemInstance.dateCompleted }}|date:'Y-m-d'">
+                        
                     </td>
                     <td>
-                        <input type="submit" name="formType" class="button" value="Update item">
+                        <input type="submit" name="formType" class="button" value="Update item" onclick="checker(event)">
                     </td>
                 </form>
             </tr>
