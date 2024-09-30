@@ -16,6 +16,8 @@ Notes when creating this website
 - Now default page has no response, but if you navigate to /playground/hello/ you will see a response!
 - Go to playground directory, create templates/X.html
 
+-Always set required installations and packages with "pip freeze > requirements.txt"
+
 To connect database to Django app
 - Create database on pgadmin
 - Update settings to connect to database
@@ -59,7 +61,9 @@ Tasks to make website
 20. Add a dividing line between rows in to-do list <- 26/09/2024
 21. When you 'complete' task, set Date completed to the chosen date <- 26/09/2024
 22. Require confirmation on update <- 26/09/2024
-23. Publish website for others to access <- WE ARE HERE
+23. Create requirements.txt file to make website deployment easier <- WE ARE HERE
+24. Publish website for others to access <- WE ARE HERE
+
 
 Tickets
 - Use JavaScript to enable change between English and Kiswahili
@@ -79,14 +83,15 @@ Go to bash console
 "git clone repository"
 Delete all irrelevant directories
 "mkvirtualenv --python=/usr/bin/python3.10 venv"
-"pip install django"
+UPDATE: "mkvirtualenv venv"
+"pip install -r requirements.txt"
 Open new tab 2 and go to dashboard
 ENTER TAB 2- Add a new web app
 Select python 3.10
 Manual configuration
 Scroll down to virtualenv
 Input venv
-Go to wsgi file, should be above the virtualenv section
+Go to wsgi configuration file, should be above the virtualenv section
 Remove all but top to end of general debugging tips, and the Django section (so about lines 74-89)
 Uncomment lines according to video
 ENTER ORIGINAL TAB -Bash console
@@ -101,7 +106,7 @@ Copy url
 Go to Files
 Go to settings.py
 Update lines:
-"DEBUG = True
+"DEBUG = False
 
 ALLOWED_HOSTS = ['Pingu03.pythonanywhere.com']"
 ENTER TAB 2
