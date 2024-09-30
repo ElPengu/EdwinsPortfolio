@@ -77,13 +77,13 @@ Tickets
 
 
 To deploy site (https://www.youtube.com/watch?v=xtnUwvjOThg&t=473s) DOESN'T WORK:
+Ensure that settings.py in Django project will correctly route to base.html
 Log into pythonanywhere
 Go to bash console
 "pwd"
 "git clone repository"
 Delete all irrelevant directories
-"mkvirtualenv --python=/usr/bin/python3.10 venv"
-UPDATE: "mkvirtualenv venv"
+"mkvirtualenv venv"
 "pip install -r requirements.txt"
 Open new tab 2 and go to dashboard
 ENTER TAB 2- Add a new web app
