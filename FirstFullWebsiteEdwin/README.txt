@@ -112,3 +112,5 @@ ALLOWED_HOSTS = ['Pingu03.pythonanywhere.com']"
 ENTER TAB 2
 Set line to something like "os.environ['DJANGO_SETTINGS_MODULE'] = 'FirstFullWebsiteEdwin.settings'"
 
+TEST LINE
+
