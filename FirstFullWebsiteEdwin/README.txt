@@ -61,9 +61,9 @@ Tasks to make website
 20. Add a dividing line between rows in to-do list <- 26/09/2024
 21. When you 'complete' task, set Date completed to the chosen date <- 26/09/2024
 22. Require confirmation on update <- 26/09/2024
-23. Create requirements.txt file to make website deployment easier <- WE ARE HERE
-24. Publish website for others to access <- WE ARE HERE
-
+23. Create requirements.txt file to make website deployment easier <- 30/09/2024
+24. Publish website for others to access <- 30/09/2024
+25. Set up database to work with published website <- WE ARE HERE
 
 Tickets
 - Use JavaScript to enable change between English and Kiswahili
@@ -76,7 +76,7 @@ Tickets
 - Have update item expand editable items when you click (on something)
 
 
-To deploy site (https://www.youtube.com/watch?v=xtnUwvjOThg&t=473s) DOESN'T WORK:
+To deploy site (https://www.youtube.com/watch?v=xtnUwvjOThg&t=473s):
 Ensure that settings.py in Django project will correctly route to base.html
 Log into pythonanywhere
 Go to bash console
