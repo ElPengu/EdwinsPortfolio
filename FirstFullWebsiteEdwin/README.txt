@@ -63,7 +63,9 @@ Tasks to make website
 22. Require confirmation on update <- 26/09/2024
 23. Create requirements.txt file to make website deployment easier <- 30/09/2024
 24. Publish website for others to access <- 30/09/2024
-25. Set up database to work with published website <- WE ARE HERE
+25. Set up database to work with published website <- 1/10/2024
+26. Set article, section, and aside to squash correctly <- 1/10/2024
+27. Set table to scroll if too big <- WE ARE HERE
 
 Tickets
 - Use JavaScript to enable change between English and Kiswahili

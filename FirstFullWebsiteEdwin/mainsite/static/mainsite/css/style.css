@@ -12,13 +12,17 @@ html element
 */
 
 /*For small screens*/
-@media screen and (max-width: 6000px){
+@media screen and (max-width: 600px){
     aside, section, article {
         width: 100% !important; 
         /*Check what happens to the page if the screen is smaller!*/
         float: none !important; /*Remove float*/
         clear: both !important; /*clear any floats*/
-        flex-direction: column !important; 
+        
+    }
+
+    main {
+        flex-direction: column !important; /*Now the elements appear vertically, not horizontally*/
     }
 }
 
@@ -127,9 +131,10 @@ main aside {
 }
 
 main section {
-    width: 50%;
+   width: 100%;
     float: left; /*Floats to left of other elements*/
     padding: 0px 20px;
+    overflow: hidden /*To prevent children from extending outside*/
 }
 
 main article {
@@ -188,6 +193,11 @@ main .submit {
 
 #StopEditing {
     display: none;
+}
+
+/*We want the table to be scrollable within the div*/
+main section .tableDiv {
+    overflow: auto; /*We can now scroll horizontally and vertically if the table is too big*/
 }
 
 

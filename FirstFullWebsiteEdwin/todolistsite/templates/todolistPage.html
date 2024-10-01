@@ -6,6 +6,7 @@
 
     <!--Show all to-do list items-->
     {% if todolistItemInstances %}
+    <div class="tableDiv">
         <table class="editableItems" id="editableItems">
             <tr>
                 <th class="hidden">Item ID</th>
@@ -93,7 +94,7 @@
 
         {% endfor %}
         </table>
-    
+    </div>
     {% else %}
         <h1>No to-do list items</h1>
     {% endif %}
