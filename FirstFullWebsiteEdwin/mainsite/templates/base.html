@@ -115,8 +115,11 @@
         </main>
 
         <footer>
-            <h1>Contact us</h1>
-            Edwin.nganga2003@gmail.com
+            <div class="buttonDiv">
+                <a href="{% url 'contactusPage' %}">
+                    <button class="button" id="contactusPageButton" onclick="clickNavbarButton(this.id)">Contact us</button>
+                </a>
+            </div>
         </footer>
 
     

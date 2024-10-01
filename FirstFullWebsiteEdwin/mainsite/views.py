@@ -148,3 +148,19 @@ def dashboardPageView(request):
 
 def nonsuperuserPageView(request):
     return render(request, 'nonsuperuserPage.html')
+
+def contactusPageView(request):
+
+    if request.method=='POST':
+        print("Form entered!")
+        
+        #Find the type of form this is
+        formType = request.POST.get('formType')
+        if formType == "Send message":
+            
+            messages.info(request, 'Successfully sent message!')
+
+            return redirect('contactusPage')
+
+
+    return render(request, 'contactusPage.html')

@@ -35,6 +35,22 @@ email: test@test.com
 name: test
 
 
+Set up env file
+pip install dotenv
+
+In file:
+"from dotenv import load_dotenv"
+"import os"
+Create .env file
+Put data in new lines in .env file, e.g.... 
+USERNAME=GoodName 
+API_KEY=1234
+Add line
+load_dotenv('.env')
+To get details in file, if string
+username: str = os.getenv('USERNAME')
+API_KEY: int = os.getenv('API_KEY')
+Add env file to .gitignore file at root directory of github
 
 
 
@@ -65,7 +81,13 @@ Tasks to make website
 24. Publish website for others to access <- 30/09/2024
 25. Set up database to work with published website <- 1/10/2024
 26. Set article, section, and aside to squash correctly <- 1/10/2024
-27. Set table to scroll if too big <- WE ARE HERE
+27. Set table to scroll if too big <- 1/10/2024
+28. Find out how to how two slightly different branches with GitHub (this allows me to work on the website on my local host as well as on PythonAnywhere whilst they are slightly different) <- 1/10/2024
+29. Ensure that article, section, and aside do not squash over each other when window changes size <- 1/10/2024
+30. Set up username and password and secret key for online database in hidden .env file <- 1/10/2024
+31. Investigate why only parts of hidden .env file work <- WE ARE HERE
+32. Set contact us form for email where subtitle and message can be sent to my address <- 1/10/2024
+
 
 Tickets
 - Use JavaScript to enable change between English and Kiswahili
@@ -73,8 +95,8 @@ Tickets
 - Investigate how to design a personal website
 - Investigate how to design a good website in general
 - Find out web design practises with highest ROI by seeing how to 
-- Ensure that article, section, and aside do not squash over each other when window changes size
 - Have update item expand editable items when you click (on something)
+- Let user know when an email has been successfully sent (HINT: use JavaScript, HTML/CSS isn't working)
 
 
 To deploy site (https://www.youtube.com/watch?v=xtnUwvjOThg&t=473s):

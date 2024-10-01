@@ -15,5 +15,6 @@ urlpatterns = [
     path('todolist/', include('todolistsite.urls')),
     #If a user tries to do superuser stuff
     path('nonsuperuser/', views.nonsuperuserPageView, name='nonsuperuserPage'),
+    path('contactus/', views.contactusPageView, name='contactusPage'),
     
 ]

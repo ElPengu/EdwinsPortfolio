@@ -1,0 +1,44 @@
+<!--Extend from a base template-->
+{% extends 'base.html' %}
+
+{% block content_dashboard %}
+<h1>Send us a message!</h1>
+
+{% for message in messages %}
+
+    <h2>{{message}}</h2>
+
+{% endfor %}
+
+<form action="https://api.web3forms.com/submit" method="POST">
+    {% csrf_token %} <!--To register user-->
+
+    <input type="hidden" name="access_key" value="7f71c76c-423f-4359-be03-d9dc9993878a">
+
+    <div class="name">
+        <p>Name: </p>
+        <input type="text" name="name">
+    </div>
+    <div class="email">
+        <p>Email: </p>
+        <input type="text" name="email">
+    </div>
+    <div class="message">
+        <p>Message: </p>
+        <input type="text" name="message">
+    </div>
+    
+    <div class="submit"></div>
+        <div class="buttonDiv">
+        <input type="submit" class="button" value="Send message">
+        </div>
+    </div>
+
+    <!--To redirect-->
+    <input type="hidden" name="redirect" value="http://127.0.0.1:8001/contactus/">
+
+    
+</form>
+
+
+{% endblock %}
