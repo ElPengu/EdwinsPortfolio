@@ -189,7 +189,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = 'username'
     EMAIL_FIELD = 'email'
     #Change?
-    REQUIRED_FIELDS = ["name"]
+    REQUIRED_FIELDS = ["name", "email"]
 
     class Meta:
         db_table = 'user' #Map to existing table

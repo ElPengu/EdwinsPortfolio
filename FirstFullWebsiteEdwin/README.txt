@@ -72,7 +72,6 @@ Tickets
 - Investigate how to design a good website in general
 - Find out web design practises with highest ROI by seeing how to 
 - Ensure that article, section, and aside do not squash over each other when window changes size
-- Require confirmation for update, just like for delete
 - Have update item expand editable items when you click (on something)
 
 
@@ -112,5 +111,39 @@ ALLOWED_HOSTS = ['Pingu03.pythonanywhere.com']"
 ENTER TAB 2
 Set line to something like "os.environ['DJANGO_SETTINGS_MODULE'] = 'FirstFullWebsiteEdwin.settings'"
 
-TEST LINE
 
+SETTING UP DATABASE ON PYTHONANYWHERE
+Go to bash
+Activate venv
+pip install --upgrade pip
+pip install pymysql
+Go to databases, then MySQL
+Set a password and initialise MySQL
+Copy database host address, this is HOST
+Copy username, this is USER
+Copy Name, this is NAME
+Open a text editor and write the following, filling in where appropriate
+DATABASES = {
+'default': {
+'ENGINE': 'django.db.backends.mysql',
+'NAME': '...',
+'USER': '...',
+'PASSWORD': '...',
+'HOST': '...',
+'PORT': '3306',
+'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"}
+}
+}
+Add new lines for DATABASES in settings.py to reflect these changes
+Comment out original DATABASES in settings.py
+Go to __init.py__
+Add following lines
+import pymysql
+
+pymysql.install_as_MySQLdb()
+
+Now we run the migrations and create a superuser
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver <- Unneeded line, the web server already uses the port
