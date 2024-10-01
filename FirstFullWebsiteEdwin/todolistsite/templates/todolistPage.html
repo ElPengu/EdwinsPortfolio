@@ -50,7 +50,7 @@
 
                     <td class="hidden">{{ itemInstance.id }} </td>
                     <td onclick="editTodolistitem()">
-                        <input type="text" name="title" value="{{ itemInstance.title }}">
+                        <input type="text" name="title" value="{{ itemInstance.title }}" required>
                     </td>
                     {% if itemInstance.description %}
                     <td onclick="editTodolistitem()">
@@ -82,7 +82,7 @@
                         {{ itemInstance.dateCreated }}
                     </td>
                     <td>
-                        <label for="Date completer">Date completed</label>
+                        <label for="Date completed">Date completed</label>
                         <input type="date" name="Date completed" value="{{ itemInstance.dateCompleted }}|date:'Y-m-d'">
                         
                     </td>
@@ -107,11 +107,11 @@
 
             <div class="title">
                 <p>Title: </p>
-                <input type="text" name="title">
+                <input type="text" name="title" required>
             </div>
             <div class="description">
                 <p>Description: </p>
-                <input type="text" name="description">
+                <input type="text" name="description" required>
             </div>
             <div class="buttonDiv">
                 <div class="submit">

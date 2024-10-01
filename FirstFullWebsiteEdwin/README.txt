@@ -85,8 +85,11 @@ Tasks to make website
 28. Find out how to how two slightly different branches with GitHub (this allows me to work on the website on my local host as well as on PythonAnywhere whilst they are slightly different) <- 1/10/2024
 29. Ensure that article, section, and aside do not squash over each other when window changes size <- 1/10/2024
 30. Set up username and password and secret key for online database in hidden .env file <- 1/10/2024
-31. Investigate why only parts of hidden .env file work <- WE ARE HERE
-32. Set contact us form for email where subtitle and message can be sent to my address <- 1/10/2024
+31. Set contact us form for email where subtitle and message can be sent to my address <- 1/10/2024
+32. Fixed email filtering so that all the messages from my site are filtered out of my own inbox (so that my inbox is not filled with those test messages!) <- 1/10/2024
+33. Made input fields required across all forms (e.g. sending message, logging in, etc.)<- 1/10/2024
+34. Investigate why only parts of hidden .env file work <- WE ARE HERE
+
 
 
 Tickets
