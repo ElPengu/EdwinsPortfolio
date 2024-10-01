@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-msnr2=q0b*%o$b$g@vs=klwo%9&+maw=rzrzbwy7-ah+c#k6s$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['Pingu03.pythonanywhere.com'] #This allows pythonAnywhere to access this correctly!
+ALLOWED_HOSTS = ['127.0.0.1', 'Pingu03.pythonanywhere.com'] #This allows pythonAnywhere to access this correctly!
 
 
 # Application definition
