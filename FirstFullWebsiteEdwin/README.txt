@@ -88,7 +88,10 @@ Tasks to make website
 31. Set contact us form for email where subtitle and message can be sent to my address <- 1/10/2024
 32. Fixed email filtering so that all the messages from my site are filtered out of my own inbox (so that my inbox is not filled with those test messages!) <- 1/10/2024
 33. Made input fields required across all forms (e.g. sending message, logging in, etc.)<- 1/10/2024
-34. Investigate why only parts of hidden .env file work <- WE ARE HERE
+34. Set password to be hidden instead of in plaintext <- 2/10/2024
+35. Set email to field to require input of type email <- 2/10/2024
+36. Allow users to view their password <- WE ARE HERE
+35. Investigate why only parts of hidden .env file work <- WE ARE HERE
 
 
 
@@ -100,6 +103,7 @@ Tickets
 - Find out web design practises with highest ROI by seeing how to 
 - Have update item expand editable items when you click (on something)
 - Let user know when an email has been successfully sent (HINT: use JavaScript, HTML/CSS isn't working)
+- Set a fake account for curious people to explore the capabilities of the to-do list
 
 
 To deploy site (https://www.youtube.com/watch?v=xtnUwvjOThg&t=473s):
