@@ -1,9 +1,13 @@
-Welcome to the GitHub repository!
+Welcome to Edwin's GitHub repository!
 
 Directory - FirstFullWebsiteEdwin
 NOTE: The project here is a work in progress that is being improved as you read this!
-The personal website project is stored in this directory. To activate it...
-1. Enter the directory
+
+To access this website online, go to: https://pingu03.pythonanywhere.com/
+
+To activate it on your local computer...
+0. Download this project
+1. Enter the FirstFullWebsite directory
 2. (Optionally) create a virtual environment with Python: "py -m venv FirstFullWebsiteEdwin"
 3. Activate the virtual environment: "FirstFullWebsiteEdwin\Scripts\activate.bat"
 4. Run the server locally: "python manage.py runserver #PORTNUMBER". #PORTNUMBER may be 8001, for
