@@ -90,7 +90,7 @@ Tasks to make website
 33. Made input fields required across all forms (e.g. sending message, logging in, etc.)<- 1/10/2024
 34. Set password to be hidden instead of in plaintext <- 2/10/2024
 35. Set email to field to require input of type email <- 2/10/2024
-36. Set a fake account for curious people to explore the capabilities of the to-do list <- WE ARE HERE
+36. Set a fake account for curious people to explore the capabilities of the to-do list <- 2/10/2024
 
 Tickets
 - Use JavaScript to enable change between English and Kiswahili
@@ -102,7 +102,9 @@ Tickets
 - Let user know when an email has been successfully sent (HINT: use JavaScript, HTML/CSS isn't working)
 - Allow users to view their password
 - Investigate why only parts of hidden .env file work
-
+- Add page for users to see their credentials
+- Allow users to update their credentials
+- Add an image of a donkey for donkey site
 
 
 
