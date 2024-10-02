@@ -28,15 +28,34 @@
                 
                 <h2>Welcome to the main page!</h2>
 
-                <h3>You are logged in</h3>
-
-                {{ user.is_authenticated }}
-
+                <h3>You are currently logged in "{{ user.name }}"</h3>
+                
+                <p>
+                    Feel free to explore this site!
+                </p>
+                <p>
+                    If you are not already using the custom-made user account, feel free to log out and log back
+                    in using the credentials below
+                </p>
+                    <ul>
+                        <li>Username: fake</li>
+                        <li>Password: fakePass</li>
+                    </ul>
+                
 
             {% else %}
                 <h2>Welcome to the main page!</h2>
 
-                <h3>You are logged out</h3>
+                <h3>You are currently logged out</h3>
+
+                <p>
+                    Feel free to log out explore this site by logging in with a custom-made fake account!
+                </p>
+                <ul>
+                    <li>Username: fake</li>
+                    <li>Password: fakePass</li>
+                </ul>
+                
                 
             {% endif %}
     

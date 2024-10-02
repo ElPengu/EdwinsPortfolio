@@ -32,6 +32,12 @@ padding into account!*/
     box-sizing: border-box;
 }
 
+/*Styling for unordered and ordered lists*/
+ul, ol {
+    margin:0; 
+    list-style-position: inside;
+}
+
 /*Generic styling*/
 /*Generic button styling*/
 .button {
