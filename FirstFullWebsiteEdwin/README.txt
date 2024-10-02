@@ -93,6 +93,7 @@ Tasks to make website
 36. Set a fake account for curious people to explore the capabilities of the to-do list <- 2/10/2024
 
 Tickets
+- Re-introduce Kiswahili button + adjust CSS for navbar elements to fit 3 elements instead of 2 (50% -> 33.33%)
 - Use JavaScript to enable change between English and Kiswahili
 - Set a good colour scheme for website
 - Investigate how to design a personal website
@@ -105,6 +106,7 @@ Tickets
 - Add page for users to see their credentials
 - Allow users to update their credentials
 - Add an image of a donkey for donkey site
+- Extend message entry box
 
 
 

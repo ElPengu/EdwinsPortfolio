@@ -104,8 +104,8 @@ header {
 
 .navbarIN div, .navbarOUT div {
     float: left;
-    width: 25%;
-    flex-basis: 25%;  /* Each element takes 25% of the available space */
+    width: 50%;
+    flex-basis: 50%;  /* Each element takes 25% of the available space */
 
 }
 
