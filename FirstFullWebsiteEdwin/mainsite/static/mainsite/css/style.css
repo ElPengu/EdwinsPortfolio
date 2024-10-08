@@ -32,6 +32,13 @@ padding into account!*/
     box-sizing: border-box;
 }
 
+/*For header*/
+header {
+    display: flex;
+    align-items: center;
+    margin: 0 auto; 
+}
+
 /*Styling for unordered and ordered lists*/
 ul, ol {
     margin:0; 
@@ -63,11 +70,14 @@ ul, ol {
 /*Table styling*/
 table {
     border-collapse: collapse; /* To merge adjacent borders */
+    margin: 0 auto; /* This centers the table within the div */
 }
 
-.divider td {
-border-top: 1px solid black; /* Adds a line between rows */
+.divider td, th {
+/*border-top: 1px solid black; /* Adds a line between rows */
 padding: 10px;
+border: 1px solid black; /*Adds border for tables*/
+padding: 10px
 }
 
 /*For hidden elements*/
@@ -204,7 +214,20 @@ main .submit {
 /*We want the table to be scrollable within the div*/
 main section .tableDiv {
     overflow: auto; /*We can now scroll horizontally and vertically if the table is too big*/
+    text-align: center;
 }
 
 
 
+/*Contact us page*/
+/*Adjusting message input*/
+.contactus .messageInput {
+    height: 100px;
+    width: 80%;
+}
+
+/*IMAGES*/
+.DonkeyEmblemImage {
+    width: 50px;
+    height: auto;
+}

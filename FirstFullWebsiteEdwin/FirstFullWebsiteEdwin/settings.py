@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'playground', #Created an app called playground
     'mainsite', #Created an app called mainsite, holds custom user
     'todolistsite', #App that holds to do lists
+    'personaldetailssite', #App that holds personal details
     'django.contrib.sites',
 
 ]

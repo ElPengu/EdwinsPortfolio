@@ -4,6 +4,12 @@
 {% block content_dashboard %}
     <h1>Welcome to the to-do list "{{ user.name }}"!</h1>
 
+    {% for message in messages %}
+
+    <h2>{{message}}</h2>
+
+    {% endfor %}
+
     <!--Show all to-do list items-->
     {% if todolistItemInstances %}
     <div class="tableDiv">

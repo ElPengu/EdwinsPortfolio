@@ -17,4 +17,6 @@ urlpatterns = [
     path('nonsuperuser/', views.nonsuperuserPageView, name='nonsuperuserPage'),
     path('contactus/', views.contactusPageView, name='contactusPage'),
     
+    #For personal details stuff
+    path('personaldetails/', include('personaldetailssite.urls'))
 ]

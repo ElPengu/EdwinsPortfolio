@@ -1,0 +1,34 @@
+<!--Extend from a base template-->
+{% extends 'base.html' %}
+
+{% block content_dashboard %}
+
+{% for message in messages %}
+
+    <h2>{{message}}</h2>
+
+{% endfor %}
+
+<h1>Here are your personal details! </h1>
+
+<div class="tableDiv">
+<table>
+    <tr class="divider">
+        <th>Name</th>
+        <th>Username</th>
+        <th>Account creation date</th>
+        <th>Is super user</th>
+        <th>Is staff</th>
+    </tr>
+
+    <tr class="divider">
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.date_created}}</td>
+        <td>{{user.is_superuser}}</td>
+        <td>{{user.is_staff}}</td>
+    </tr>
+</table>
+</div>
+    
+{% endblock %}
