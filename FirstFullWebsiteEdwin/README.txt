@@ -95,8 +95,9 @@ Tasks to make website
 38. Extend message entry box <- 8/10/2024
 39. Add page for users to see their credentials <- 8/10/2024
 40. Added emblem to header <- 8/10/2024
-41. Figure out how to centre header with emblem <- 9/10/2024
-42. Update online website <- 9/10/2024
+41. Figure out how to centre header with emblem <- 11/10/2024
+42. Update online website <- 11/10/2024
+43. - Have update item expand editable items when you click (on something) <- 11/10/2024
 
 Tickets
 - Re-introduce Kiswahili button + adjust CSS for navbar elements to fit 3 elements instead of 2 (50% -> 33.33%)
@@ -105,7 +106,6 @@ Tickets
 - Investigate how to design a personal website
 - Investigate how to design a good website in general
 - Find out web design practises with highest ROI by seeing how to 
-- Have update item expand editable items when you click (on something)
 - Let user know when an email has been successfully sent (HINT: use JavaScript, HTML/CSS isn't working)
 - Allow users to view/change their password
 - Investigate why only parts of hidden .env file work
