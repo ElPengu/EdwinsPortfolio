@@ -32,11 +32,11 @@ padding into account!*/
     box-sizing: border-box;
 }
 
-/*For header*/
-header {
+/*For Title and emblem*/
+.TitleAndEmblem {
     display: flex;
     align-items: center;
-    margin: 0 auto; 
+    justify-content: center; /*Horizontally centers elements without space between*/
 }
 
 /*Styling for unordered and ordered lists*/
