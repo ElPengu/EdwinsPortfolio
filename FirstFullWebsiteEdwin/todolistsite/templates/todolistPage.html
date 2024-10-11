@@ -13,9 +13,9 @@
     <!--Show all to-do list items-->
     {% if todolistItemInstances %}
     <div class="tableDiv">
-        <table class="editableItems" id="editableItems">
+        <table id="editableItems">
             <tr>
-                <th class="hidden">Item ID</th>
+                <th class="hiddenCantShow">Item ID</th>
                 <th>Title</th>
                 <th>Description</th>
                 <th>Completed</th>
@@ -25,16 +25,16 @@
             </tr>
         {% for itemInstance in todolistItemInstances%}
             <tr class="divider">
-                <td class="hidden">{{ itemInstance.id }} </td>
-                <td onclick="editTodolistitem()">{{ itemInstance.title }}</td>
+                <td class="hiddenCantShow">{{ itemInstance.id }} </td>
+                <td>{{ itemInstance.title }}</td>
                 {% if itemInstance.description %}
-                <td onclick="editTodolistitem()">{{ itemInstance.description }}</td>
+                <td>{{ itemInstance.description }}</td>
                 {% else %}
-                <td onclick="editTodolistitem()"> No description</td>
+                <td> No description</td>
                 {% endif %}
-                <td onclick="editTodolistitem()">{{ itemInstance.completed }}</td>
-                <td onclick="editTodolistitem()">{{ itemInstance.dateCreated }}</td>
-                <td onclick="editTodolistitem()">{{ itemInstance.dateCompleted }}</td>
+                <td>{{ itemInstance.completed }}</td>
+                <td>{{ itemInstance.dateCreated }}</td>
+                <td>{{ itemInstance.dateCompleted }}</td>
                 <td>
                     <form action="{% url 'todolistPage' %}" method="POST">
                         {% csrf_token %} <!--To register user-->
@@ -54,21 +54,21 @@
                     <!--We pass the id of the itemInstance-->
                     <input type="hidden" name="itemInstanceID" value={{itemInstance.id}}>
 
-                    <td class="hidden">{{ itemInstance.id }} </td>
-                    <td onclick="editTodolistitem()">
+                    <td class="hiddenCantShow">{{ itemInstance.id }} </td>
+                    <td  class="hidden">
                         <input type="text" name="title" value="{{ itemInstance.title }}" required>
                     </td>
                     {% if itemInstance.description %}
-                    <td onclick="editTodolistitem()">
+                    <td class="hidden">
                         <input type="text" name="description" value="{{ itemInstance.description }}">
                     </td>
                     {% else %}
-                    <td onclick="editTodolistitem()"> 
+                    <td class="hidden"> 
                         <input type="text" name="description" value="No description">
                     </td>
                     {% endif %}
                     {% if itemInstance.completed == False %}
-                    <td>
+                    <td class="hidden">
                         <label for="Completed task">Completed task</label>
                         <select name="Completed task" id="Completed task">
                             <option value="False">False</option>
@@ -76,7 +76,7 @@
                         </select>
                     </td>
                     {% else %}
-                    <td>
+                    <td class="hidden">
                         <label for="Completed task">Completed task</label>
                         <select name="Completed task" id="Completed task">
                             <option value="True">True</option>
@@ -84,15 +84,15 @@
                         </select>
                     </td>
                     {% endif %}
-                    <td>
+                    <td class="hidden">
                         {{ itemInstance.dateCreated }}
                     </td>
-                    <td>
+                    <td class="hidden">
                         <label for="Date completed">Date completed</label>
                         <input type="date" name="Date completed" value="{{ itemInstance.dateCompleted }}|date:'Y-m-d'">
                         
                     </td>
-                    <td>
+                    <td class="hidden">
                         <input type="submit" name="formType" class="button" value="Update item" onclick="checker(event)">
                     </td>
                 </form>
@@ -125,7 +125,12 @@
                 </div>
             </div>
             
+
         </form>
+        <div class="buttonDiv">
+            <button class="button" onclick="editingMode('editableItems')" id="editModeToDoListTable">Enter editing mode</button>
+
+        </div>
     </div>
 
     <div id="EditToDoListItems">

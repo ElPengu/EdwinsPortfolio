@@ -81,7 +81,7 @@ padding: 10px
 }
 
 /*For hidden elements*/
-.hidden {
+.hidden, .hiddenCantShow {
     display: none;
 }
 
@@ -198,7 +198,7 @@ main .submit {
 }
 
 /*To edit an item in the table*/
-.editableItems tr td {
+.editableItems tr th, .editableItems tr td {
     cursor: pointer; /*On hover the mouse points to it!*/
 }
 

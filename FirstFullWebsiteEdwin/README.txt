@@ -110,8 +110,6 @@ Tickets
 - Allow users to view/change their password
 - Investigate why only parts of hidden .env file work
 - Allow users to update their credentials
-- Add an image of a donkey for donkey site
-- 
 - Add a blog!
 
 

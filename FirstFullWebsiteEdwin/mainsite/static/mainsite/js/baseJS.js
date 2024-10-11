@@ -49,3 +49,48 @@ function editTodolistitem() {
     }
     
 }
+
+/*To unhide all elements in a table when the table 
+is clicked, typically for editing the table*/
+function editingMode(tableDivByID) {
+
+    /**Get parent div from argument */
+    const tableDiv = document.getElementById(tableDivByID);
+
+    /**Get all elements with class 'hidden' and 'unhidden' in tableDiv*/
+    const hiddenElements = tableDiv.getElementsByClassName('hidden');
+    const unhiddenElements = tableDiv.getElementsByClassName('unhidden');
+    
+
+    const unhiddenElementsCount = unhiddenElements.length;
+    const hiddenElementsCount = hiddenElements.length;
+
+    /**If no unhidden elements, convert all to hidden 
+     * to unhidden! */
+    if (unhiddenElementsCount === 0 ||
+        unhiddenElementsCount <= hiddenElementsCount
+    ) {
+        /**Change inner html */
+        document.getElementById("editModeToDoListTable")
+        .innerHTML = "Exit editing mode";
+
+        /*Now switch all hidden to unhidden*/
+        for (let i = hiddenElementsCount-1; i >= 0; i--) {
+            hiddenElements[i].className = 'unhidden';
+        }
+    }
+    /**Else if no hidden elements, convert all unhidden 
+     * to hidden
+    */
+    else if (hiddenElementsCount === 0 || 
+        hiddenElementsCount <= unhiddenElementsCount) {
+        /**Change inner html */
+        document.getElementById("editModeToDoListTable")
+        .innerHTML = "Enter editing mode";
+        
+            /*Now switch all unhidden to hidden*/
+        for (let i = unhiddenElementsCount-1; i>=0; i--) {
+            unhiddenElements[i].className = 'hidden';
+        }
+    }
+}
