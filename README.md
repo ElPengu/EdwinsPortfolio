@@ -23,8 +23,8 @@ To use the website, you have two options
 2. Failing (1), register a new fake account
 
 Already made account
-- Username: testuser
-- Password: testuserpass
+- Username: fake
+- Password: fakePass
 
 
 
