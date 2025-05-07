@@ -20,11 +20,11 @@ for their system
 
 To use the website, you have two options
 1. Use the already-made account
-2. Failing (1), register a new fake account
+2. Register a new account
 
 Already made account
-- Username: testuser
-- Password: testuserpass
+- Username: fake
+- Password: fakePass
 
 
 
