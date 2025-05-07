@@ -1,8 +1,10 @@
 Welcome to Edwin's GitHub repository!
 
-Directory - FirstFullWebsiteEdwin
-NOTE: The project here is a work in progress that is being improved as you read this!
+Directory - Leetcode
+My attempts and notes for the Neetcode 150 course (a curated list of 150 LeetCode problems) are located here. The problems are arranged by pattern. 
 
+
+Directory - FirstFullWebsiteEdwin
 To access this website online, go to: https://pingu03.pythonanywhere.com/
 
 To activate it on your local computer...
@@ -16,8 +18,7 @@ example
 If you have any issues with step 4, it is probably due to import faults. In this case, you must
 import them. E.g., "py -m pip install Django".
 
-NOTE: These instructions work on Windows. Non-Windows users must use the analogous commands 
-for their system
+NOTE: These instructions work on Windows. Use the analogous commands if you do not use Windows.
 
 To use the website, you have two options
 1. Use the already-made account
@@ -28,7 +29,6 @@ Already made account
 - Password: fakePass
 
 
-
 Rest of the directories
 
-Generally speaking the rest are simply practise. Feel free to peruse, maybe you'll find an Easter egg! 
+Generally speaking, all other content is my own practise. Feel free to peruse, maybe you'll find an Easter egg! 
