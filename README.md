@@ -2,7 +2,7 @@ Welcome to Edwin's GitHub repository!
 
 **Directory - Leetcode**
 
-My attempts and notes for the Neetcode 150 course (a curated list of 150 LeetCode problems) are located here. The problems are arranged by pattern. 
+My attempts and notes for the Neetcode 150 course (a curated list of 150 LeetCode problems) are located here, arranged by pattern. 
 
 
 **Directory - FirstFullWebsiteEdwin**
@@ -20,7 +20,7 @@ example
 If you have any issues with step 4, it is probably due to import faults. In this case, you must
 import them. E.g., "py -m pip install Django".
 
-NOTE: These instructions work on Windows. Use the analogous commands if you do not use Windows.
+NOTE: These instructions work on Windows. If you do not use Windows, use the analogous commands for these steps.
 
 To use the website, you have two options
 1. Use the already-made account
@@ -31,6 +31,6 @@ Already made account
 - Password: fakePass
 
 
-**Rest of the directories**
+**Unmentioned directories**
 
-Generally speaking, all other content is my own practise. Feel free to peruse, maybe you'll find an Easter egg! 
+Generally, all other content is my own practise. Feel free to peruse, maybe you'll find an Easter egg! 
