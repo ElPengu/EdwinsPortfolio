@@ -6,6 +6,7 @@ NOTE: The project here is a work in progress that is being improved as you read 
 To access this website online, go to: https://pingu03.pythonanywhere.com/
 
 To activate it on your local computer...
+
 0. Download this project
 1. Enter the FirstFullWebsite directory
 2. (Optionally) create a virtual environment with Python: "py -m venv FirstFullWebsiteEdwin"
