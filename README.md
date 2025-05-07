@@ -30,4 +30,5 @@ Already made account
 
 
 Rest of the directories
-Most of the directories that can be seen are simply practise. 
+
+Generally speaking the rest are simply practise. Feel free to peruse, maybe you'll find an Easter egg! 
