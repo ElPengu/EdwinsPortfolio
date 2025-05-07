@@ -97,7 +97,7 @@ Tasks to make website
 40. Added emblem to header <- 8/10/2024
 41. Figure out how to centre header with emblem <- 11/10/2024
 42. Update online website <- 11/10/2024
-43. - Have update item expand editable items when you click (on something) <- 11/10/2024
+43. Have update item expand editable items when you click (This took me so long, haha) <- 11/10/2024
 
 Tickets
 - Re-introduce Kiswahili button + adjust CSS for navbar elements to fit 3 elements instead of 2 (50% -> 33.33%)

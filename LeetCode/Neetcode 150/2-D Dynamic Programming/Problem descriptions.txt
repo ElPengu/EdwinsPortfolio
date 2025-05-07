@@ -1,0 +1,113 @@
+Unique Paths
+Medium
+There is an m x n grid where you are allowed to move either down or to the right at any point in time.
+
+Given the two integers m and n, return the number of possible unique paths that can be taken from the top-left corner of the grid (grid[0][0]) to the bottom-right corner (grid[m - 1][n - 1]).
+
+You may assume the output will fit in a 32-bit integer.
+
+
+
+
+Longest Common Subsequence
+Medium
+Given two strings text1 and text2, return the length of the longest common subsequence between the two strings if one exists, otherwise return 0.
+
+A subsequence is a sequence that can be derived from the given sequence by deleting some or no elements without changing the relative order of the remaining characters.
+
+For example, "cat" is a subsequence of "crabt".
+A common subsequence of two strings is a subsequence that exists in both strings.
+
+
+
+Best Time to Buy and Sell Stock with Cooldown
+Medium
+You are given an integer array prices where prices[i] is the price of NeetCoin on the ith day.
+
+You may buy and sell one NeetCoin multiple times with the following restrictions:
+
+After you sell your NeetCoin, you cannot buy another one on the next day (i.e., there is a cooldown period of one day).
+You may only own at most one NeetCoin at a time.
+You may complete as many transactions as you like.
+
+Return the maximum profit you can achieve.
+
+
+
+Coin Change II
+Medium
+You are given an integer array coins representing coins of different denominations (e.g. 1 dollar, 5 dollars, etc) and an integer amount representing a target amount of money.
+
+Return the number of distinct combinations that total up to amount. If it's impossible to make up the amount, return 0.
+
+You may assume that you have an unlimited number of each coin and that each value in coins is unique.
+
+
+
+Target Sum
+Medium
+You are given an array of integers nums and an integer target.
+
+For each number in the array, you can choose to either add or subtract it to a total sum.
+
+For example, if nums = [1, 2], one possible sum would be "+1-2=-1".
+If nums=[1,1], there are two different ways to sum the input numbers to get a sum of 0: "+1-1" and "-1+1".
+
+Return the number of different ways that you can build the expression such that the total sum equals target.
+
+
+
+Interleaving String
+Medium
+You are given three strings s1, s2, and s3. Return true if s3 is formed by interleaving s1 and s2 together or false otherwise.
+
+Interleaving two strings s and t is done by dividing s and t into n and m substrings respectively, where the following conditions are met
+
+|n - m| <= 1, i.e. the difference between the number of substrings of s and t is at most 1.
+s = s1 + s2 + ... + sn
+t = t1 + t2 + ... + tm
+Interleaving s and t is s1 + t1 + s2 + t2 + ... or t1 + s1 + t2 + s2 + ...
+You may assume that s1, s2 and s3 consist of lowercase English letters.
+
+
+Longest Increasing Path in Matrix
+Hard
+You are given a 2-D grid of integers matrix, where each integer is greater than or equal to 0.
+
+Return the length of the longest strictly increasing path within matrix.
+
+From each cell within the path, you can move either horizontally or vertically. You may not move diagonally.
+
+
+Edit Distance
+Medium
+You are given two strings word1 and word2, each consisting of lowercase English letters.
+
+You are allowed to perform three operations on word1 an unlimited number of times:
+
+Insert a character at any position
+Delete a character at any position
+Replace a character at any position
+Return the minimum number of operations to make word1 equal word2.
+
+
+
+Burst Balloons
+Hard
+You are given an array of integers nums of size n. The ith element represents a balloon with an integer value of nums[i]. You must burst all of the balloons.
+
+If you burst the ith balloon, you will receive nums[i - 1] * nums[i] * nums[i + 1] coins. If i - 1 or i + 1 goes out of bounds of the array, then assume the out of bounds value is 1.
+
+Return the maximum number of coins you can receive by bursting all of the balloons.
+
+
+
+
+Regular Expression Matching
+Hard
+You are given an input string s consisting of lowercase english letters, and a pattern p consisting of lowercase english letters, as well as '.', and '*' characters.
+
+Return true if the pattern matches the entire input string, otherwise return false.
+
+'.' Matches any single character
+'*' Matches zero or more of the preceding element.

@@ -1,0 +1,113 @@
+Reverse Linked List
+Easy
+Given the beginning of a singly linked list head, reverse the list, and return the new beginning of the list.
+
+
+Merge Two Sorted Linked Lists
+Easy
+You are given the heads of two sorted linked lists list1 and list2.
+
+Merge the two lists into one sorted linked list and return the head of the new sorted linked list.
+
+The new list should be made up of nodes from list1 and list2.
+
+
+Linked List Cycle Detection
+Easy
+Given the beginning of a linked list head, return true if there is a cycle in the linked list. Otherwise, return false.
+
+There is a cycle in a linked list if at least one node in the list can be visited again by following the next pointer.
+
+Internally, index determines the index of the beginning of the cycle, if it exists. The tail node of the list will set it's next pointer to the index-th node. If index = -1, then the tail node points to null and no cycle exists.
+
+Note: index is not given to you as a parameter.
+
+
+Reorder Linked List
+Medium
+You are given the head of a singly linked-list.
+
+The positions of a linked list of length = 7 for example, can intially be represented as:
+
+[0, 1, 2, 3, 4, 5, 6]
+
+Reorder the nodes of the linked list to be in the following order:
+
+[0, 6, 1, 5, 2, 4, 3]
+
+Notice that in the general case for a list of length = n the nodes are reordered to be in the following order:
+
+[0, n-1, 1, n-2, 2, n-3, ...]
+
+You may not modify the values in the list's nodes, but instead you must reorder the nodes themselves.
+
+
+Remove Node From End of Linked List
+Medium
+You are given the beginning of a linked list head, and an integer n.
+
+Remove the nth node from the end of the list and return the beginning of the list.
+
+
+Copy Linked List with Random Pointer
+Medium
+You are given the head of a linked list of length n. Unlike a singly linked list, each node contains an additional pointer random, which may point to any node in the list, or null.
+
+Create a deep copy of the list.
+
+The deep copy should consist of exactly n new nodes, each including:
+
+The original value val of the copied node
+A next pointer to the new node corresponding to the next pointer of the original node
+A random pointer to the new node corresponding to the random pointer of the original node
+Note: None of the pointers in the new list should point to nodes in the original list.
+
+Return the head of the copied linked list.
+
+
+Add Two Numbers
+Medium
+You are given two non-empty linked lists, l1 and l2, where each represents a non-negative integer.
+
+The digits are stored in reverse order, e.g. the number 123 is represented as 3 -> 2 -> 1 -> in the linked list.
+
+Each of the nodes contains a single digit. You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
+Return the sum of the two numbers as a linked list.
+
+
+Find the Duplicate Number
+Medium
+You are given an array of integers nums containing n + 1 integers. Each integer in nums is in the range [1, n] inclusive.
+
+Every integer appears exactly once, except for one integer which appears two or more times. Return the integer that appears more than once.
+
+
+LRU Cache
+Medium
+Implement the Least Recently Used (LRU) cache class LRUCache. The class should support the following operations
+
+LRUCache(int capacity) Initialize the LRU cache of size capacity.
+int get(int key) Return the value corresponding to the key if the key exists, otherwise return -1.
+void put(int key, int value) Update the value of the key if the key exists. Otherwise, add the key-value pair to the cache. If the introduction of the new pair causes the cache to exceed its capacity, remove the least recently used key.
+A key is considered used if a get or a put operation is called on it.
+
+Ensure that get and put each run in O(1) average time complexity.
+
+
+Merge K Sorted Linked Lists
+Hard
+You are given an array of k linked lists lists, where each list is sorted in ascending order.
+
+Return the sorted linked list that is the result of merging all of the individual linked lists.
+
+
+Reverse Nodes in K-Group
+Hard
+You are given the head of a singly linked list head and a positive integer k.
+
+You must reverse the first k nodes in the linked list, and then reverse the next k nodes, and so on. If there are fewer than k nodes left, leave the nodes as they are.
+
+Return the modified list after reversing the nodes in each group of k.
+
+You are only allowed to modify the nodes' next pointers, not the values of the nodes.

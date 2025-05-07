@@ -1,0 +1,83 @@
+Kth Largest Element in a Stream
+Easy
+Design a class to find the kth largest integer in a stream of values, including duplicates. E.g. the 2nd largest from [1, 2, 3, 3] is 3. The stream is not necessarily sorted.
+
+Implement the following methods:
+
+constructor(int k, int[] nums) Initializes the object given an integer k and the stream of integers nums.
+int add(int val) Adds the integer val to the stream and returns the kth largest integer in the stream.
+
+
+Last Stone Weight
+Easy
+You are given an array of integers stones where stones[i] represents the weight of the ith stone.
+
+We want to run a simulation on the stones as follows:
+
+At each step we choose the two heaviest stones, with weight x and y and smash them togethers
+If x == y, both stones are destroyed
+If x < y, the stone of weight x is destroyed, and the stone of weight y has new weight y - x.
+Continue the simulation until there is no more than one stone remaining.
+
+Return the weight of the last remaining stone or return 0 if none remain.
+
+
+K Closest Points to Origin
+Medium
+You are given an 2-D array points where points[i] = [xi, yi] represents the coordinates of a point on an X-Y axis plane. You are also given an integer k.
+
+Return the k closest points to the origin (0, 0).
+
+The distance between two points is defined as the Euclidean distance (sqrt((x1 - x2)^2 + (y1 - y2)^2)).
+
+You may return the answer in any order.
+
+
+Kth Largest Element in an Array
+Given an unsorted array of integers nums and an integer k, return the kth largest element in the array.
+
+By kth largest element, we mean the kth largest element in the sorted order, not the kth distinct element.
+
+Follow-up: Can you solve it without sorting?
+
+
+
+Task Scheduler
+Medium
+You are given an array of CPU tasks tasks, where tasks[i] is an uppercase english character from A to Z. You are also given an integer n.
+
+Each CPU cycle allows the completion of a single task, and tasks may be completed in any order.
+
+The only constraint is that identical tasks must be separated by at least n CPU cycles, to cooldown the CPU.
+
+Return the minimum number of CPU cycles required to complete all tasks.
+
+
+Design Twitter
+Medium
+Implement a simplified version of Twitter which allows users to post tweets, follow/unfollow each other, and view the 10 most recent tweets within their own news feed.
+
+Users and tweets are uniquely identified by their IDs (integers).
+
+Implement the following methods:
+
+Twitter() Initializes the twitter object.
+void postTweet(int userId, int tweetId) Publish a new tweet with ID tweetId by the user userId. You may assume that each tweetId is unique.
+List<Integer> getNewsFeed(int userId) Fetches at most the 10 most recent tweet IDs in the user's news feed. Each item must be posted by users who the user is following or by the user themself. Tweets IDs should be ordered from most recent to least recent.
+void follow(int followerId, int followeeId) The user with ID followerId follows the user with ID followeeId.
+void unfollow(int followerId, int followeeId) The user with ID followerId unfollows the user with ID followeeId.
+
+
+Find Median From Data Stream
+Hard
+The median is the middle value in a sorted list of integers. For lists of even length, there is no middle value, so the median is the mean of the two middle values.
+
+For example:
+
+For arr = [1,2,3], the median is 2.
+For arr = [1,2], the median is (1 + 2) / 2 = 1.5
+Implement the MedianFinder class:
+
+MedianFinder() initializes the MedianFinder object.
+void addNum(int num) adds the integer num from the data stream to the data structure.
+double findMedian() returns the median of all elements so far.

@@ -1,0 +1,67 @@
+Notes for answers
+
+Q: "What is the concept behind the solution to the following problem: "
+A: "
+
+"
+
+Q: "What is the Bellman-Ford algorithm used for?"
+A: "
+- The Bellman-Ford algorithm is used to compute how long it takes to reach each node from some source node
+"
+
+Q: Explain and give the pseudo-code for the Bellman-Ford algorithm
+A: "
+- The Bellman-Ford algorithm is used to compute how long it takes to reach each node from some source node
+
+function bellmanFord(G, S)
+  for each vertex V in G
+    distance[V] <- infinite
+      previous[V] <- NULL
+  distance[S] <- 0
+
+  for each vertex V in G				
+    for each edge (U,V) in G
+      tempDistance <- distance[U] + edge_weight(U, V)
+      if tempDistance < distance[V]
+        distance[V] <- tempDistance
+        previous[V] <- U
+
+  for each edge (U,V) in G
+    if distance[U] + edge_weight(U, V) < distance[V]
+      Error: Negative Cycle Exists
+
+  return distance[], previous[]
+"
+
+Q: "What is the benefit of the Bellman-Ford Algorithm that sets it apart from Djikstra's algorithm?"
+A: "
+- Whilst both the Bellman-Ford Algorithm and Djikstra's algorithm are both used to find shortest paths, Djikstra's algorithm cannot be used on graphs with negative weights
+"
+
+
+Q: "What is the concept behind the solution to the following problem: There are n airports, labeled from 0 to n - 1, which are connected by some flights. You are given an array flights where flights[i] = [from_i, to_i, price_i] represents a one-way flight from airport from_i to airport to_i with cost price_i. You may assume there are no duplicate flights and no flights from an airport to itself. You are also given three integers src, dst, and k where: src is the starting airport. dst is the destination airport. src != dst. k is the maximum number of stops you can make (not including src and dst). Return the cheapest price from src to dst with at most k stops, or return -1 if it is impossible. <- Cheapest Flights Within K Stops (Medium)
+"
+A: "
+- We have n airports labelled 0 to n-1
+- We have an array of flights
+- flights[i] = [from_i,to_i,price_i]
+- There are no duplicate flights nor flights from an airport to itself
+
+- src, dst: source,destination
+- src IS NOT dst
+- k is maximum number of intermediary airports
+- Cheapest price from src to dst with at most k stops, -1 if impossible
+
+- We COULD use Djikstra's algorithm, but the constraint about stops makes it not super-efficient, but it is still doable! 
+- We will use the Bellman-Ford algorithm. This shortest-path algorithm can incorporate the at most k stops part
+
+- This is a shortest path algorithm
+
+- The main idea used is that we assume that it takes infinite time to reach each city apart from the source
+- Now we ask ourselves how long it would take in 1 step. So we loop over every edge i->j and use the cost to get to i to compute the time to get to j
+- We only store a new cost to get to j if it is smaller than what it was before
+
+- O(E*V) <- Time complexity for Bellman Ford generally
+- O(E*k) <- Time complexity for Bellman-Ford in this **specific** problem where k is the maximum number of stops 
+"

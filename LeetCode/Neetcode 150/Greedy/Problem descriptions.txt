@@ -1,0 +1,90 @@
+Maximum Subarray
+Medium
+Given an array of integers nums, find the subarray with the largest sum and return the sum.
+
+A subarray is a contiguous non-empty sequence of elements within an array.
+
+
+
+Jump Game
+Medium
+You are given an integer array nums where each element nums[i] indicates your maximum jump length at that position.
+
+Return true if you can reach the last index starting from index 0, or false otherwise.
+
+
+
+Jump Game II
+Medium
+You are given an array of integers nums, where nums[i] represents the maximum length of a jump towards the right from index i. For example, if you are at nums[i], you can jump to any index i + j where:
+
+j <= nums[i]
+i + j < nums.length
+You are initially positioned at nums[0].
+
+Return the minimum number of jumps to reach the last position in the array (index nums.length - 1). You may assume there is always a valid answer.
+
+
+
+Gas Station
+Medium
+There are n gas stations along a circular route. You are given two integer arrays gas and cost where:
+
+gas[i] is the amount of gas at the ith station.
+cost[i] is the amount of gas needed to travel from the ith station to the (i + 1)th station. (The last station is connected to the first station)
+You have a car that can store an unlimited amount of gas, but you begin the journey with an empty tank at one of the gas stations.
+
+Return the starting gas station's index such that you can travel around the circuit once in the clockwise direction. If it's impossible, then return -1.
+
+It's guaranteed that at most one solution exists.
+
+
+
+
+Hand of Straights
+Medium
+You are given an integer array hand where hand[i] is the value written on the ith card and an integer groupSize.
+
+You want to rearrange the cards into groups so that each group is of size groupSize, and card values are consecutively increasing by 1.
+
+Return true if it's possible to rearrange the cards in this way, otherwise, return false.
+
+
+
+
+
+Merge Triplets to Form Target
+Medium
+You are given a 2D array of integers triplets, where triplets[i] = [ai, bi, ci] represents the ith triplet. You are also given an array of integers target = [x, y, z] which is the triplet we want to obtain.
+
+To obtain target, you may apply the following operation on triplets zero or more times:
+
+Choose two different triplets triplets[i] and triplets[j] and update triplets[j] to become [max(ai, aj), max(bi, bj), max(ci, cj)].
+* E.g. if triplets[i] = [1, 3, 1] and triplets[j] = [2, 1, 2], triplets[j] will be updated to [max(1, 2), max(3, 1), max(1, 2)] = [2, 3, 2].
+
+Return true if it is possible to obtain target as an element of triplets, or false otherwise.
+
+
+
+Partition Labels
+Medium
+You are given a string s consisting of lowercase english letters.
+
+We want to split the string into as many substrings as possible, while ensuring that each letter appears in at most one substring.
+
+Return a list of integers representing the size of these substrings in the order they appear in the string.
+
+
+
+Valid Parenthesis String
+Medium
+You are given a string s which contains only three types of characters: '(', ')' and '*'.
+
+Return true if s is valid, otherwise return false.
+
+A string is valid if it follows all of the following rules:
+
+Every left parenthesis '(' must have a corresponding right parenthesis ')'.
+Every right parenthesis ')' must have a corresponding left parenthesis '('.
+Left parenthesis '(' must go before the corresponding right parenthesis ')'.
+A '*' could be treated as a right parenthesis ')' character or a left parenthesis '(' character, or as an empty string "".

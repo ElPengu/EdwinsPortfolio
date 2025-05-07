@@ -1,0 +1,77 @@
+Binary Search
+Easy
+You are given an array of distinct integers nums, sorted in ascending order, and an integer target.
+
+Implement a function to search for target within nums. If it exists, then return its index, otherwise, return -1.
+
+Your solution must run in 
+O(logn) time.
+
+
+Search a 2D Matrix
+Medium
+You are given an m x n 2-D integer array matrix and an integer target.
+
+Each row in matrix is sorted in non-decreasing order.
+The first integer of every row is greater than the last integer of the previous row.
+Return true if target exists within matrix or false otherwise.
+
+Can you write a solution that runs in O(log(m * n)) time?
+
+
+Koko Eating Bananas
+Medium
+You are given an integer array piles where piles[i] is the number of bananas in the ith pile. You are also given an integer h, which represents the number of hours you have to eat all the bananas.
+
+You may decide your bananas-per-hour eating rate of k. Each hour, you may choose a pile of bananas and eats k bananas from that pile. If the pile has less than k bananas, you may finish eating the pile but you can not eat from another pile in the same hour.
+
+Return the minimum integer k such that you can eat all the bananas within h hours
+
+
+Find Minimum in Rotated Sorted Array
+Medium
+You are given an array of length n which was originally sorted in ascending order. It has now been rotated between 1 and n times. For example, the array nums = [1,2,3,4,5,6] might become:
+
+[3,4,5,6,1,2] if it was rotated 4 times.
+[1,2,3,4,5,6] if it was rotated 6 times.
+Notice that rotating the array 4 times moves the last four elements of the array to the beginning. Rotating the array 6 times produces the original array.
+
+Assuming all elements in the rotated sorted array nums are unique, return the minimum element of this array.
+
+A solution that runs in O(n) time is trivial, can you write an algorithm that runs in O(log n) time?
+
+
+Search in Rotated Sorted Array
+Medium
+You are given an array of length n which was originally sorted in ascending order. It has now been rotated between 1 and n times. For example, the array nums = [1,2,3,4,5,6] might become:
+
+[3,4,5,6,1,2] if it was rotated 4 times.
+[1,2,3,4,5,6] if it was rotated 6 times.
+Given the rotated sorted array nums and an integer target, return the index of target within nums, or -1 if it is not present.
+
+You may assume all elements in the sorted rotated array nums are unique,
+
+A solution that runs in O(n) time is trivial, can you write an algorithm that runs in O(log n) time?
+
+
+Time Based Key-Value Store
+Medium
+Implement a time-based key-value data structure that supports:
+
+Storing multiple values for the same key at specified time stamps
+Retrieving the key's value at a specified timestamp
+Implement the TimeMap class:
+
+TimeMap() Initializes the object.
+void set(String key, String value, int timestamp) Stores the key key with the value value at the given time timestamp.
+String get(String key, int timestamp) Returns the most recent value of key if set was previously called on it and the most recent timestamp for that key prev_timestamp is less than or equal to the given timestamp (prev_timestamp <= timestamp). If there are no values, it returns "".
+Note: For all calls to set, the timestamps are in strictly increasing order.
+
+
+
+Median of Two Sorted Arrays
+Hard
+You are given two integer arrays nums1 and nums2 of size m and n respectively, where each is sorted in ascending order. Return the median value among all elements of the two arrays.
+
+Your solution must run in O(log(m+n)) time.
+

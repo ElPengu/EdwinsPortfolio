@@ -1,0 +1,29 @@
+Valid Palindrome
+Easy
+Given a string s, return true if it is a palindrome, otherwise return false.
+
+A palindrome is a string that reads the same forward and backward. It is also case-insensitive and ignores all non-alphanumeric characters.
+
+
+Two Integer Sum II
+Medium
+Given an array of integers numbers that is sorted in non-decreasing order.
+
+Return the indices (1-indexed) of two numbers, [index1, index2], such that they add up to a given target number target and index1 < index2. Note that index1 and index2 cannot be equal, therefore you may not use the same element twice.
+
+There will always be exactly one valid solution.
+
+Your solution must use O(1) additional space.
+
+
+3Sum
+Medium
+Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] where nums[i] + nums[j] + nums[k] == 0, and the indices i, j and k are all distinct.
+The output should not contain any duplicate triplets. You may return the output and the triplets in any order.
+
+
+Container With Most Water
+Medium
+You are given an integer array heights where heights[i] represents the height of the ith bar.
+
+You may choose any two bars to form a container. Return the maximum amount of water a container can store.

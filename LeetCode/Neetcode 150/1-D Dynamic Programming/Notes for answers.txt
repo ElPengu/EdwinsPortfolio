@@ -1,0 +1,60 @@
+Notes for answers
+
+Q: "What is the concept behind the solution to the following problem: "
+A: "
+
+"
+
+
+Q:
+"
+You are told to generate two subsets from a general set nums where both subsets have the same sum. State a useful piece of intuition that could help with this investigation.
+"
+A:
+"
+- Let target = sum(nums)//2 AND sum(nums)%2 == 0
+-> I.e., target is half sum(nums) and sum(nums) is NOT odd
+- A SINGLE subset MUST sum to target
+"
+
+Q:
+"
+What is the concept behind the solution to the following problem: You are given an array of positive integers nums. Return true if you can partition the array into two subsets, subset1 and subset2 where sum(subset1) == sum(subset2). Otherwise, return false. <- Partition Equal Subset Sum (Medium)
+"
+A:
+"
+- We have an array of POSITIVE integers
+- Can we PARTITION into TWO subsets where both have the same sum
+
+- INTELLIGENT REFRAMING OF PROBLEM
+- How can you partition nums into two subsets where ONE (1) partition sums to EXACTLY sum(nums)/2
+
+- BRUTE FORCE APPROACH
+-> Consider [1,5,11,5]
+-> Our target is 11
+-> Do we choose 1 or nothing?
+-> For either choice, so we choose 5 or nothing
+-> For either of THESE choices we choose 11 or nothing
+
+- DP APPROACH
+- We want to abstract the idea of including vs not including an element in a subset
+- We are only interested in sums, so at every element we ask ourselves: what exactly are the sums of the subsets that we can generate through including vs not including this element for every subset that we have created so far?
+- We will hold a set of sums, initially empty
+-> {}
+- Consider [1,5,11,5], target = 11
+- BASE CASE: We could include or not include any elements
+-> {0}
+- We could include 5 or not include 5
+-> {0,5} <- not include 5 vs include 5
+- We could include 11 or not, so consider all that are currently in the set
+-> {0,5,11,16}
+- We could include 5 or not, so consider all that are currently in the set
+-> {0,5,11,16,10,21}
+- We could include 1 or not, so consider all that are currently in the set
+-> {0,5,11,16,10,21,1,6,12,17,22}
+- Finished evaluating
+- RETURN 11 IN SET
+
+- O(sum(nums)) space <- there are N+1 possible sizes
+- O(sum(nums)) time <- For every possible size you would do constant time addition
+"

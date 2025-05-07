@@ -1,0 +1,76 @@
+Rotate Image
+Medium
+Given a square n x n matrix of integers matrix, rotate it by 90 degrees clockwise.
+
+You must rotate the matrix in-place. Do not allocate another 2D matrix and do the rotation.
+
+
+
+Spiral Matrix
+Medium
+Given an m x n matrix of integers matrix, return a list of all elements within the matrix in spiral order.
+
+
+
+Set Matrix Zeroes
+Medium
+Given an m x n matrix of integers matrix, if an element is 0, set its entire row and column to 0's.
+
+You must update the matrix in-place.
+
+Follow up: Could you solve it using O(1) space?
+
+
+
+Non-Cyclical Number
+Easy
+A non-cyclical number is an integer defined by the following algorithm:
+
+Given a positive integer, replace it with the sum of the squares of its digits.
+Repeat the above step until the number equals 1, or it loops infinitely in a cycle which does not include 1.
+If it stops at 1, then the number is a non-cyclical number.
+Given a positive integer n, return true if it is a non-cyclical number, otherwise return false.
+
+
+
+Plus One
+Easy
+You are given an integer array digits, where each digits[i] is the ith digit of a large integer. It is ordered from most significant to least significant digit, and it will not contain any leading zero.
+
+Return the digits of the given integer after incrementing it by one.
+
+
+
+Pow(x, n)
+Medium
+Pow(x, n) is a mathematical function to calculate the value of x raised to the power of n (i.e., x^n).
+
+Given a floating-point value x and an integer value n, implement the myPow(x, n) function, which calculates x raised to the power n.
+
+You may not use any built-in library functions.
+
+
+
+Multiply Strings
+Medium
+You are given two strings num1 and num2 that represent non-negative integers.
+
+Return the product of num1 and num2 in the form of a string.
+
+Assume that neither num1 nor num2 contain any leading zero, unless they are the number 0 itself.
+
+Note: You can not use any built-in library to convert the inputs directly into integers.
+
+
+
+Detect Squares
+Medium
+You are given a stream of points consisting of x-y coordinates on a 2-D plane. Points can be added and queried as follows:
+
+Add - new points can be added to the stream into a data structure. Duplicate points are allowed and should be treated as separate points.
+Query - Given a single query point, count the number of ways to choose three additional points from the data structure such that the three points and the query point form a square. The square must have all sides parallel to the x-axis and y-axis, i.e. no diagonal squares are allowed. Recall that a square must have four equal sides.
+Implement the CountSquares class:
+
+CountSquares() Initializes the object.
+void add(int[] point) Adds a new point point = [x, y].
+int count(int[] point) Counts the number of ways to form valid squares with point point = [x, y] as described above.

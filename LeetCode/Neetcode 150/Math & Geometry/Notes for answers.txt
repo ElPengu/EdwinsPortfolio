@@ -1,0 +1,62 @@
+Notes for answers
+
+Q: "What is the concept behind the solution to the following problem: "
+A: "
+
+"
+
+
+Q: "
+State the reason that you can not iterate over a default dict dictionary and then directly access it within the same for loop
+"
+A: "
+- When you access the dictionary, you assume that it exists
+- If it does not exist, then you may update the dictionary
+- Python does not like it when the range that you are looping for changes mid-loop!
+"
+
+Q: "
+What is the concept behind the solution to the following problem: You are given a stream of points consisting of x-y coordinates on a 2-D plane. Points can be added and queried as follows: Add - new points can be added to the stream into a data structure. Duplicate points are allowed and should be treated as separate points. Query - Given a single query point, count the number of ways to choose three additional points from the data structure such that the three points and the query point form a square. The square must have all sides parallel to the x-axis and y-axis, i.e. no diagonal squares are allowed. Recall that a square must have four equal sides. Implement the CountSquares class: CountSquares() Initializes the object. void add(int[] point) Adds a new point point = [x, y]. int count(int[] point) Counts the number of ways to form valid squares with point point = [x, y] as described above. <- Detect Squares (Medium)
+"
+A: "
+- You are given a stream of points of x-y coordinates on a 2D plane
+- Add - new points are added to the data structure. Duplicate points are allowed and should be treated as separate
+- Query - Given a single query point, count the number of ways to choose three additional points such that they and the query point form a square. The square must have all sides parallel to the x-axis and y-axis 
+-> Recall that a square must have four equal sides 
+
+- Problems
+- Determining how many squares you can create given duplicate points
+- Storing the points given we must store duplicates
+- Detecting a square
+- Determining what a diagonal is
+
+
+- Determining how many squares you can create given duplicate points
+- If you have x duplicate points, then you can use each x point for a different square
+- Hence, x different squares
+- If you have x duplicate points, and y different duplicate points, then you can use each x point for a different square, and for each of those squares you can use each y point for a different square
+- Hence, x * y different squares 
+
+- Storing the points given we must store duplicates
+- Naturally this lends itself to a hash map
+- Key: Set of coordinates of a point
+- Value: A count for the number of such points 
+
+- Detecting a square
+- We use some geometry
+- We check every point for whether it is a DIAGONAL point
+- We verify whether these two points can form a square
+- Let query point = (Px,Py), diagonal point = (x,y)
+- We see if one point exists with the x-coord of 1 and y-coord of the other
+- (x,Py), (Px,y)
+
+- Detecting a rectangle
+- A fun little trick, but detect a square except you don't care whether the two points form a DIAGONAL 
+
+- Determining what a diagonal is
+- A diagonal is formed by points p0 and p1
+- You can start at p0, walk in the x direction for X steps, and then walk in the y direction for X steps
+- After this you reach point p1
+- Given p0 = (x_p0, y_p0), p1=(x_p1,y_p1)
+- abs(x_p1-x_p0) == abs(y_p1-y_p0)
+"
