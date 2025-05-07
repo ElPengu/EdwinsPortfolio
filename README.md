@@ -1,11 +1,11 @@
 Welcome to Edwin's GitHub repository!
 
-Directory - Leetcode
+**Directory - Leetcode**
 
 My attempts and notes for the Neetcode 150 course (a curated list of 150 LeetCode problems) are located here. The problems are arranged by pattern. 
 
 
-Directory - FirstFullWebsiteEdwin
+**Directory - FirstFullWebsiteEdwin**
 
 To access this website online, go to: https://pingu03.pythonanywhere.com/
 
@@ -31,6 +31,6 @@ Already made account
 - Password: fakePass
 
 
-Rest of the directories
+**Rest of the directories**
 
 Generally speaking, all other content is my own practise. Feel free to peruse, maybe you'll find an Easter egg! 
