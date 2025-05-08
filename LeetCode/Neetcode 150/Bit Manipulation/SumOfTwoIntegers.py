@@ -56,50 +56,53 @@ class Solution:
         - onlyCarries = onlyCarries << 1
 
 
-        - Now that we have that covered, let's look at 
-        the Python-specific aspects to this code
-        - Python does NOT automatically deal with 
-        overflow, therefore we use a mask so that we 
-        overflow at 32 bits
-        - Our mask is set at this overflow value: 2^32 -1
-        - When we set a and b, we AND with the mask
-        - Therefore any bits outside our 32 bit range will 
-        be set to 0, all inside will be unaffected
-        - Why not AND tmp with our mask? 
-        - We could, but we only set it up as our carry for 
-        b
-        - So when we set b, our tmp may overflow, but we 
-        remove those pesky 1's at the end
-        
-        - By the end our a may be positive or negative
-        - If a is positive we can return it
-        - If a is negative... we need to be able to detect 
-        this
-        - This is equivalent to saying that we are larger 
-        than the largest positive 32-bit integer
-        - The largest positive 32-bit integer is 2^31 -1
-        -> mask//2
-        - Exceeding mask//2 means that our 32nd bit from 
-        the RIGHT is 1, meaning that we have a negative 
-        number!
-        - We currently have infinite zeroes, then a in two's 
-        complement
-        - Python represents negative numbers with infinite 0s
-        - We want to have infinite 1s, then a in two's 
-        complement
-        - First, get a in twos complement 
+        - All Python aspects can be understood by the 
+        following facts
+        - Python represents negative numbers with 
+        infinite leading 1s, which must all be operated 
+        on
+        - A 32-bit register is enough to represent the 
+        range of a and b
+        - We mask variables that we will reuse
+        - All specific underlying concepts are explained 
+        on my Notion page
         '''        
 
+        # Set a 32-bit mask, enough for -1000<a,b<1000
         mask = 0xffffffff
 
+        # Operate until there is no more carry
         while b != 0:
-            tmp = (a & b) << 1
+            # Find the carry from adding a and b
+            carry = (a & b) << 1
+            # Find the sum without the carry of a and b
+            # We mask a because we will reuse it
             a = (a ^ b) & mask
-            b = tmp & mask
+            # Set b to be the carry
+            # We mask since we will reuse it
+            b = carry & mask
 
-        if a > mask // 2:
+        if a > (mask >> 1):
+            # We have a larger number than the largest 
+            # number we can represent
+            # So our MSB is on
+            # So we have a negative number
+
+            # We XOR a with the mask to flip all bits in 
+            # the register
+
+            # We flip all bits 
+            # This turns all leading 0s to 1s, so the 
+            # number is negative
+            # This flips all bits in the register, getting 
+            # the original negative number that was stored
+
             return ~(a ^ mask)
         else:
+            # We have leading 0s followed by the number
+            # So the representation of a corresponds with 
+            # the representation of a that Python would 
+            # use
             return a
 
 
