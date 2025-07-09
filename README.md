@@ -1,5 +1,12 @@
 Welcome to Edwin's GitHub repository!
 
+**Directory - AreteTechnologiesSite**
+This project contains an ASP.NET Core project. 
+
+To activate it on your local computer
+0. Download this project
+1. Open the Visual Studio project
+2. Click run or hit F5
 
 **Directory - FirstFullWebsiteEdwin**
 
