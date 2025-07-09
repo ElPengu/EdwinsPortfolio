@@ -1,0 +1,12 @@
+if __name__ == "__main__":
+    graph = {
+        'A': ['B', 'C'],
+        'B': ['A', 'D', 'E'],
+        'C': ['A', 'F'],
+        'D': ['B'],
+        'E': ['B'],
+        'F': ['C']
+    }
+
+    print("BFS starting from A:", bfs(graph, 'A'))  # Expected: ['A', 'B', 'C', 'D', 'E', 'F']
+    print("DFS starting from A:", dfs(graph, 'A'))  # Expected: ['A', 'B', 'D', 'E', 'C', 'F']
