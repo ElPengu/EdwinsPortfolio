@@ -1,9 +1,5 @@
 Welcome to Edwin's GitHub repository!
 
-**Directory - Leetcode**
-
-My attempts and notes for the Neetcode 150 course (a curated list of 150 LeetCode problems) are located here, arranged by pattern. 
-
 
 **Directory - FirstFullWebsiteEdwin**
 
@@ -30,6 +26,9 @@ Already made account
 - Username: fake
 - Password: fakePass
 
+**Directory - Leetcode**
+
+My attempts and notes for the Neetcode 150 course (a curated list of 150 LeetCode problems) are located here, arranged by pattern. 
 
 **Unmentioned directories**
 
