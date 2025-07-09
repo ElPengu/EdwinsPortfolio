@@ -1,0 +1,33 @@
+﻿<h4>Search for a joke</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <!--The action for this form is to show the results
+            We need to create this action!
+        -->
+        <form asp-action="ShowSearchResults">
+            
+            <!--Here we choose what we want to show-->
+            <!--We don't want to show the ID nor the jokeQuestion
+                But we do want to show the JokeAnswer
+                So we only write for the JokeAnswer!
+            -->            
+            <div class="form-group">
+                <!--The **name** of what we create is SearchPhrase-->
+                <!--This is important because the Controller reads this!-->
+                <label for="SearchPhrase" class="control-label"></label>
+                <input name="SearchPhrase" class="form-control" />
+                
+            </div>
+            <!--Now we have an action for submitting to the db-->
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+            <!--Cool, now the form is done!-->
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

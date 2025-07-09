@@ -1,0 +1,49 @@
+﻿@model IEnumerable<AreteTechnologiesSite.Models.Joke>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Jokes</h1>
+
+<p>
+    <ul class="navbar-nav flex-grow-1">
+        <li class="crud-button">
+            <a class="nav-link text-dark" asp-action="Create">Create New</a>
+        </li>
+    </ul>
+    
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Joke Question
+                <!--@Html.DisplayNameFor(model => model.JokeQuestion)-->
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.JokeQuestion)
+            </td>
+            <td>
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="crud-button">
+                            <a class="nav-link text-dark" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        </li>
+                        <li class="crud-button">
+                            <a class="nav-link text-dark" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                        </li>
+                        <li class="crud-button">
+                            <a class="nav-link text-dark" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </li>
+                    </ul>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

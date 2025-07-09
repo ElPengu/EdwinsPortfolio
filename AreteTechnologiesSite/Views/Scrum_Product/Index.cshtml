@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AreteTechnologiesSite.Models.Scrum_Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductVision)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductVision)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<!--Write notes about your product-->
+<p> Here you can write some notes about your products!</p>
+<div class="container">
+    <h1>Product notes</h1>
+    <form>
+        <div class="form-group">
+            <textarea placeholder="Product notes" class="form-control" name="Product Notes" rows="10" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-lg btn-dark btn-block">Update notes</button>
+    </form>
+</div>

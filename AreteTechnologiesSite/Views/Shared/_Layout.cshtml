@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AreteTechnologiesSite</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AreteTechnologiesSite.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <!--Here is the navbar across all sites, set up for us!-->
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">
+                        <!--To always get to the image for razor pages-->
+                        <img id="icon" src="~/Images/ARETE_TECHNOLOGIES_ICON.png" alt="Arete Technologies Icon" />
+                    </a>
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Scrum" asp-action="Index">Scrum</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Articles" asp-action="Index">Articles</a>
+                        </li>
+
+                        <!--Note that the asp-controller is for controller-->
+                        <!--When we click on Jokes we are handled by the Jokes controller-->
+                        <!-- What I think happens
+                            Jokes controller -> 
+                            action Index -> 
+                            function Index->
+                            Asks ORM to list everything in its database ->
+                            Passed back up
+                        (in Jokes controller)-->
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Jokes" asp-action="Index">Jokes</a>
+                        </li>
+                        <!--This is for searching the Jokes db
+                            The search function will immediately appear
+                            We use the ShowSearchForm action which we 
+                            must define within the Controller to do
+                            something
+                        -->
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Jokes" asp-action="ShowSearchForm">Search</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - AreteTechnologiesSite - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <a href="https://www.linkedin.com/company/arete-technologies-1">
+        <img class="socialMediaIcon" src="~/Images/linkedin.png" alt="LinkedIn icon" />
+    </a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

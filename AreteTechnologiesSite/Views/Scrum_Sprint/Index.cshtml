@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Scrum Increments";
+}
+
+<div class="text-center">
+    <h1>Sprints</h1>
+    <p>View an old Sprint or start a new Sprint here!</p>
+    
+    <button type="submit" class="btn btn-lg btn-dark btn-block">Create Sprint</button>
+
+    
+    <!--Cannot have button in a tag, restyle with CSS-->
+    <a class="nav-link text-dark" asp-area="" asp-controller="Scrum_Sprint_Active" asp-action="Index">
+        <button type="submit" class="btn btn-lg btn-dark btn-block">
+            Sprint 1
+        </button>
+    </a>
+    
+    
+    
+</div>
+
+
