@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36212.18 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNETPRACTISE_EDWIN", "ASPNETPRACTISE_EDWIN.csproj", "{784E2F76-4D48-4C95-A0FD-B48A93E3A457}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{784E2F76-4D48-4C95-A0FD-B48A93E3A457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{784E2F76-4D48-4C95-A0FD-B48A93E3A457}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{784E2F76-4D48-4C95-A0FD-B48A93E3A457}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{784E2F76-4D48-4C95-A0FD-B48A93E3A457}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB394106-77BC-4F9E-BE28-B4F5FB482F18}
+	EndGlobalSection
+EndGlobal
