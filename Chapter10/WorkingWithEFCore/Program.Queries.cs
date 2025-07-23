@@ -1,6 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore; // To use Include method.
 using Northwind.EntityModels; // To use Northwind, Category, Product.
 
+// To use CollectionEntry to manually load related entities
+// Now we can control what data is loaded and when
+// This is Explicit Loading
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+
 // If you wonder why partial classes are written 
 // like this, then check out the chapter on C#
 
@@ -26,8 +31,27 @@ partial class Program
         using NorthwindDb db = new();
         SectionTitle("Categories and how many products they have");
         // A query to get all categories and their related products.
-        IQueryable<Category>? categories = db.Categories?
-            .Include(c => c.Products);
+        IQueryable<Category>? categories;
+        // = db.Categories;
+        //.Include(c => c.Products);
+        //Disabling lazy loading above
+
+        db.ChangeTracker.LazyLoadingEnabled = false;
+        Write("Enable eager loading? (Y/N): ");
+        bool eagerLoading = (ReadKey().Key == ConsoleKey.Y);
+        bool explicitLoading = false;
+        WriteLine();
+        if (eagerLoading)
+        {
+            categories = db.Categories?.Include(c => c.Products);
+        }
+        else
+        {
+            categories = db.Categories;
+            Write("Enable explicit loading? (Y/N): ");
+            explicitLoading = (ReadKey().Key == ConsoleKey.Y);
+            WriteLine();
+        }
         if (categories is null || !categories.Any())
         {
             Fail("No categories found.");
@@ -36,6 +60,20 @@ partial class Program
         // Execute query and enumerate results.
         foreach (Category c in categories)
         {
+            /*Check if explicit loading is enabled*/
+            if (explicitLoading)
+            {
+                Write($"Explicitly load products for {c.CategoryName}? (Y/N): ");
+                ConsoleKeyInfo key = ReadKey();
+                WriteLine();
+                if (key.Key == ConsoleKey.Y)
+                {
+                    CollectionEntry<Category, Product> products =
+                      db.Entry(c).Collection(c2 => c2.Products);
+                    if (!products.IsLoaded) products.Load();
+                }
+            }
+
             WriteLine($"{c.CategoryName} has {c.Products.Count} products.");
         }
     }
@@ -198,6 +236,29 @@ partial class Program
             return;
         }
         WriteLine($"Random product: {p.ProductId} - {p.ProductName}");
+    }
+
+    /*
+     * A no tracking query for products
+     * When you enumerate producs, use 
+     * lazy loading to feetch related 
+     * categories
+     */
+    private static void LazyLoadingWithNoTracking()
+    {
+        using NorthwindDb db = new();
+        SectionTitle("Lazy-loading with no tracking");
+        IQueryable<Product>? products = db.Products?.AsNoTracking();
+        if (products is null || !products.Any())
+        {
+            Fail("No products found.");
+            return;
+        }
+        foreach (Product p in products)
+        {
+            WriteLine("{0} is in category named {1}.",
+              p.ProductName, p.Category.CategoryName);
+        }
     }
 }
 

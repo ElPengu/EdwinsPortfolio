@@ -46,6 +46,10 @@ public class NorthwindDb : DbContext
         #endif
         ;
 
+        // To use lazy loading proxies
+        // Every time the loop enumerates the 
+        // proxy loads the data JIT
+        optionsBuilder.UseLazyLoadingProxies();
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

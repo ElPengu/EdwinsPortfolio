@@ -39,6 +39,10 @@
 
 		<!---To work with the SQLite database-->
 		<PackageReference Version="8.0.0" Include="Microsoft.EntityFrameworkCore.Sqlite" />
+	
+		<!---Enable lazy loading-->
+		<!---Basically JIT loading of data!-->
+		<PackageReference Version="8.0.0" Include="Microsoft.EntityFrameworkCore.Proxies"/>
 	</ItemGroup>
     
 	<!---Reference to project with class models-->

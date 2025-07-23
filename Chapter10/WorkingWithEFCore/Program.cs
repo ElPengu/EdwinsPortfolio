@@ -14,7 +14,7 @@ using Northwind.EntityModels; // To use Northwind.
 //QueryingWithLike and onwards
 
 // Within Program.Helpers.cs partial class
-//ConfigureConsole();
+ConfigureConsole();
 
 // Within Program.Queries.cs partial class
 //QueryingCategories();
@@ -41,9 +41,11 @@ using Northwind.EntityModels; // To use Northwind.
 // Now that now we do not show discontinued products, 
 // Note the missing Chef Anton's Fumbo Mix when
 // you enter a partial product name like che
-QueryingWithLike();
+//QueryingWithLike();
 
 // How do we get a random product? By using a
 // random number function within the method!
 // Note it runs automatically, no input!
 //GetRandomProduct();
+
+LazyLoadingWithNoTracking();
