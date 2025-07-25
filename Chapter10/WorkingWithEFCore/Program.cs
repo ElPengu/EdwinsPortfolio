@@ -48,4 +48,72 @@ ConfigureConsole();
 // Note it runs automatically, no input!
 //GetRandomProduct();
 
-LazyLoadingWithNoTracking();
+//As title suggests
+//LazyLoadingWithNoTracking();
+
+//We are now doing CRUD!
+// To CREATE in products it is kind of hard, take a look!
+
+/*
+var resultAdd = AddProduct(categoryId: 6, productName: "Bob's Burgers", price: 500M, stock: 72);
+if (resultAdd.affected == 1)
+{
+    WriteLine($"Add product successful with ID: {resultAdd.productId}.");
+}
+
+//To READ from products it is quite easy!
+ListProducts(productIdsToHighlight: new[] { resultAdd.productId });
+*/
+
+//To UPDATE in products
+/*
+var resultUpdate = IncreaseProductPrice(
+  productNameStartsWith: "Bob", amount: 20M);
+if (resultUpdate.affected == 1)
+{
+    WriteLine($"Increase price success for ID: {resultUpdate.productId}.");
+}
+
+//To READ from products it is quite easy!
+ListProducts(productIdsToHighlight: new[] { resultUpdate.productId });
+*/
+
+
+/*
+WriteLine("About to delete all products whose name starts with Bob.");
+Write("Press Enter to continue or any other key to exit: ");
+if (ReadKey(intercept: true).Key == ConsoleKey.Enter)
+{
+    int deleted = DeleteProducts(productNameStartsWith: "Bob");
+    WriteLine($"{deleted} product(s) were deleted.");
+}
+else
+{
+    WriteLine("Delete was canceled.");
+}
+*/
+
+// Must have add function on
+// Note how the cost for Bob goes up in each 
+// run!
+/*
+var resultUpdateBetter = IncreaseProductPricesBetter(
+  productNameStartsWith: "Bob", amount: 20M);
+if (resultUpdateBetter.affected > 0)
+{
+    WriteLine("Increase product price successful.");
+}
+ListProducts(productIdsToHighlight: resultUpdateBetter.productIds);
+*/
+
+WriteLine("About to delete all products whose name starts with Bob.");
+Write("Press Enter to continue or any other key to exit: ");
+if (ReadKey(intercept: true).Key == ConsoleKey.Enter)
+{
+    int deleted = DeleteProductsBetter(productNameStartsWith: "Bob");
+    WriteLine($"{deleted} product(s) were deleted.");
+}
+else
+{
+    WriteLine("Delete was canceled.");
+}

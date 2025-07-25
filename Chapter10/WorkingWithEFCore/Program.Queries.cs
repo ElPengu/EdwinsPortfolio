@@ -246,6 +246,8 @@ partial class Program
      */
     private static void LazyLoadingWithNoTracking()
     {
+
+        WriteLine("CULPRIT!"); 
         using NorthwindDb db = new();
         SectionTitle("Lazy-loading with no tracking");
         IQueryable<Product>? products = db.Products?.AsNoTracking();

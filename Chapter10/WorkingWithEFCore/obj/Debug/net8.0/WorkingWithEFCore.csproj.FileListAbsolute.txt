@@ -10,6 +10,7 @@ C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debu
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\WorkingWithEFCore.pdb
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\Castle.Core.dll
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\Humanizer.dll
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -26,6 +27,7 @@ C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debu
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Proxies.dll
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Sqlite.dll
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
@@ -152,6 +154,8 @@ C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debu
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\Northwind.EntityModels.dll
+C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\Northwind.EntityModels.pdb
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\obj\Debug\net8.0\WorkingWithEFCore.csproj.AssemblyReference.cache
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\obj\Debug\net8.0\rpswa.dswa.cache.json
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\obj\Debug\net8.0\WorkingWithEFCore.GeneratedMSBuildEditorConfig.editorconfig
@@ -173,14 +177,10 @@ C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\obj\Debu
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\obj\Debug\net8.0\WorkingW.CDE1A2E7.Up2Date
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\obj\Debug\net8.0\WorkingWithEFCore.dll
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\obj\Debug\net8.0\refint\WorkingWithEFCore.dll
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\obj\Debug\net8.0\WorkingWithEFCore.pdb
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\obj\Debug\net8.0\WorkingWithEFCore.genruntimeconfig.cache
 C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\obj\Debug\net8.0\ref\WorkingWithEFCore.dll
-C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\Northwind.EntityModels.dll
-C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\Northwind.EntityModels.pdb
-C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\Castle.Core.dll
-C:\Users\edwin\source\repos\EdwinsPortfolio\Chapter10\WorkingWithEFCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Proxies.dll

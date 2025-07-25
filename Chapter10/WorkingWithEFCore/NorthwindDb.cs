@@ -40,16 +40,18 @@ public class NorthwindDb : DbContext
         // of 20100
         new[] { RelationalEventId.CommandExecuting }) 
         
+        
         #if DEBUG
           .EnableSensitiveDataLogging() // Include SQL parameters.
           .EnableDetailedErrors()
         #endif
         ;
+        
 
         // To use lazy loading proxies
         // Every time the loop enumerates the 
         // proxy loads the data JIT
-        optionsBuilder.UseLazyLoadingProxies();
+        //optionsBuilder.UseLazyLoadingProxies();
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -71,7 +73,9 @@ public class NorthwindDb : DbContext
         }
 
         // A global filter to remove discontinued products.
-        modelBuilder.Entity<Product>()
-          .HasQueryFilter(p => !p.Discontinued);
+        
+        //modelBuilder.Entity<Product>()
+        //  .HasQueryFilter(p => !p.Discontinued);
+        
     }
 }
